@@ -35,7 +35,6 @@ class App extends Component {
     return (
       <div className="App">
       
-          <LambdaDemo />
       
       </div>
     )
