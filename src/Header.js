@@ -7,4 +7,4 @@
             </div>
         )
     }
-    
+    export default Header
