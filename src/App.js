@@ -21,7 +21,7 @@ class LambdaDemo extends Component {
 
     return (
       <p>
-        
+        <button></button>
         <br />
         <span>{msg}</span>
       </p>
