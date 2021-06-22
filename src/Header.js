@@ -3,8 +3,8 @@
 
     export const Header = () => {
         return (
-            <div id="layan">
-                I love Layan
+            <div id="Header">
+               Arabic Learning App
             </div>
         )
     }
