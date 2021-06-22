@@ -1,9 +1,13 @@
 import React from 'react'
 
 export const App = () => {
-  return (
-    <div>
+  render() 
+    return (
+      <div className="App">
       
-    </div>
-  )
-}
+      
+      </div>
+    )
+  }
+
+export default App
