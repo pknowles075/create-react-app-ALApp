@@ -3,8 +3,9 @@
 
     export const Header = () => {
         return (
-            <div id="Header">
-               Arabic Learning App
+            <div className="Header">
+               <div id="items">Home</div>
+               <div id="items">FlashCards</div>
             </div>
         )
     }
