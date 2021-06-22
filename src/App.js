@@ -9,11 +9,10 @@ class LambdaDemo extends Component {
 
  
   render() {
-
-    return (
-     <a>hi</a>
-    )
   }
+    return(
+
+    );
 }
 
 class App extends Component {
