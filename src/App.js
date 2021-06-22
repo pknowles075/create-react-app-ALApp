@@ -7,23 +7,13 @@ class LambdaDemo extends Component {
     this.state = { loading: false, msg: null }
   }
 
-  handleClick = api => e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
+ 
   render() {
     const { loading, msg } = this.state
 
     return (
       <p>
-        <button></button>
-        <br />
-        <span>{msg}</span>
+        hi
       </p>
     )
   }
