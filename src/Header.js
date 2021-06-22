@@ -1,8 +1,9 @@
     import React from 'react'
-    
+    import "./HeaderStyle.css"
+
     export const Header = () => {
         return (
-            <div>
+            <div id="layan">
                 I love Layan
             </div>
         )

@@ -1,0 +1,12 @@
+#layan{
+    color:green;
+    font-family: 'Courier New', Courier, monospace;
+}
+@keyframes Layan {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
