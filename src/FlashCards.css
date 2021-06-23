@@ -18,3 +18,8 @@
     font-size: 60px;
     color: var(--color1);
 }
+#nextButton{
+    margin-top: 300px;
+    color:red;
+    font-size: 25px;
+}
