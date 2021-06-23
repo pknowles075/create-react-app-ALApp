@@ -6,18 +6,20 @@
     --color5:rgb(16, 41, 95);
     cursor: pointer;
 }
+:root{
+    --color1:#3f3f3f;
+}
 .Header{
-    color:blue;
+    color:var(--color1);
     width:100%;
     height: 100px;
     background-color: var(--color2);
-    background-color: turquoise;
+    background-color: rgb(255, 255, 255);
 }
 #divItems{
 
     color: var(--color5);
-    font-size: 25px;
-    background-color: var(--color1);
+    font-size: 15px;
     margin:10px 10px 0 10px;
 }
 .Header #items:hover{
