@@ -1,10 +1,11 @@
     import React,{useState} from 'react'
     import FlashCards from './FlashCards';
     import "./HeaderStyle.css"
-
+import Grammer from './Grammer';
 
 export const Header = () => {
     const [ShowCard,setShowCard]=useState(false);
+    const [ShowCardGrammar,setShowCardGrammar]=useState(false);
 
     return (
         <>
@@ -12,10 +13,11 @@ export const Header = () => {
                  <div id="title">LearnArabic</div>
         <button onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</button>
      
-        <button id="divItems">Grammar</button>{}
+        <button onClick={()=>setShowCardGrammar(!ShowCardGrammar)} id="divItems">Grammar</button>{}
         <button id="divItems">Vocab</button>{}
         {ShowCard && <FlashCards />}
-       
+        {ShowCardGrammar && ShowCard ===false && <Grammer /> }
+
       </div>
       </>
     )
