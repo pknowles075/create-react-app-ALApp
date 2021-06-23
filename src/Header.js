@@ -9,9 +9,12 @@ export const Header = () => {
     return (
         <>
              <div className="Header">
+                 <div id="title">LearnArabic</div>
         <button onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</button>{ShowCard && <FlashCards />}
      
-     
+        <button id="divItems">Grammar</button>{ShowCard && <FlashCards />}
+        <button id="divItems">Vocab</button>{ShowCard && <FlashCards />}
+
        
       </div>
       </>

@@ -11,14 +11,14 @@
     width:100%;
     height: 100px;
     background-color: var(--color2);
-    flex-wrap: wrap;
     background-color: turquoise;
 }
 #divItems{
-float: left;   
+
     color: var(--color5);
     font-size: 25px;
     background-color: var(--color1);
+    margin:10px 10px 0 10px;
 }
 .Header #items:hover{
     background-color: var(--color1);
