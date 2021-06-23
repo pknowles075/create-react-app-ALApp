@@ -5,12 +5,12 @@ function fCF(any){
     var lEng=["White","Yellow","Blue"];
     var lAra=["Abyad","Asfar","Azraq"];
     let c=Math.floor(Math.random()*lEng.length)
-
-    if(any==0){
-        var combine = lAra[c];
+    var combine;
+    if(any===0){
+         combine = lAra[c];
     }
-    if(any==1){
-        var combine =lEng[c];
+    if(any===1){
+         combine =lEng[c];
     }
     
     return combine;
