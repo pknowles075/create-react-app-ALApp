@@ -17,7 +17,7 @@ export const Header = () => {
         <div onClick={()=>setShowCardGrammar(!ShowCardGrammar)} id="divItems">Grammar</div>{}
         <div onClick={()=>setShowCardVoacb(!ShowCardVocab)} id="divItems">Vocab</div>{}
         {ShowCard && <FlashCards />}
-        {ShowCardGrammar && ShowCard ===false && <Grammer /> }
+        {ShowCardGrammar && ShowCard  && <Grammer /> }
         {ShowCardVocab && ShowCardGrammar ===false &&<Voacb /> }
       </div>
       </>
