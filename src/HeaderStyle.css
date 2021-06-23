@@ -15,8 +15,7 @@
     background-color: turquoise;
 }
 #divItems{
-    margin: 10px 500px 10px 10px;
-   
+float: left;   
     color: var(--color5);
     font-size: 25px;
     background-color: var(--color1);
