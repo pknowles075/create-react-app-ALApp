@@ -9,15 +9,15 @@ export const FlashCards = () => {
 
     return (
         <div className="main">
-            <div id="flashCard">
-                    <div id="item" onClick={animalF}>June 22,2021 Animals
+          
+                    <div id="flashCard" onClick={animalF}>
+                        <div id="flashCardText"><span role="img" aria-label="string">📅</span>June 22,2021 Animals</div>
                     <br>
                     </br>
                     <div id="info"></div>
                     </div>
             </div>
             
-        </div>
     )
 
 

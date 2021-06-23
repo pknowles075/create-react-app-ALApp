@@ -1,27 +1,21 @@
-    import React from 'react'
+    import React,{useState} from 'react'
+    import FlashCards from './FlashCards';
     import "./HeaderStyle.css"
-  import FlashCards from './FlashCards';
-    class Header extends React.Component {
-        constructor() {
-          super();
-          this.state = {
-            isShow: false
-          }
-          this.createText = this.createText.bind(this);
-        }
-      
-      
-        createText() {
-          this.setState({ isShow: true }) 
-          
-        }
-        render() {
-          return (
-            <div className="Header">
-              <button onClick={this.createText}>Click</button>
-              {this.state.isShow && <FlashCards/>}
-            </div>
-          );
-        }
-      }
-    export default Header;
+
+
+export const Header = () => {
+    const [ShowCard,setShowCard]=useState(false);
+
+    return (
+        <>
+             <div className="Header">
+        <button id="divItems"onClick={()=>setShowCard(!ShowCard)}>FlashCards</button>{ShowCard && <FlashCards />}
+     
+       
+      </div>
+      </>
+    )
+
+
+}
+export default Header;

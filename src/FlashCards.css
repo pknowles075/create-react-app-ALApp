@@ -1,35 +1,18 @@
-:root{
-    user-select: none;
--moz-user-select: none;
-
-    --color1:#ffffff;
-    --color2:#99aab5;
-    --color3:#2c2f33;
-    --color4:#23272a;
-    cursor: pointer;
-}
-.main{
-    position: relative;
-    margin-top: 75px;
-    background-color:var(--color3);
-    width:100%;
+#flashCard{
+    color: white;
+  
+    display: inline-block;
+    margin: 100px;
+    width: 500px;
     height: 500px;
-}
-#x{
-    font-size: 60px;
-    color: var(--color1);
-}
-#nextButton{
-    margin-top: 300px;
-    color:red;
-    font-size: 25px;
-}
-#item{
-    color:red;
-    float: left;
+    background-color: black;
+    }
+
+#flashCardText{
+    
+    color: violet;
 }
 #info{
-    color: white;
-    font-size: 20px;
-
+    color: violet;
+    float: left;
 }
