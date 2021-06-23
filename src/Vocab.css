@@ -2,7 +2,9 @@
 table{
     width: 50%;
  outline: 1px solid black;
-margin: auto;
+ margin: auto;
+ margin-top: 100px;
+
 }
 table,th,td{
     margin-top:20px 20px 20px 20px;
