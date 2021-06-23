@@ -12,12 +12,28 @@ export const Header = () => {
         <>
              <div className="Header">
                  <div id="title">LearnArabic</div>
-        <div onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</div>
+        <div onClick={()=>{
+             setShowCard(true);
+             setShowCardGrammar(false)
+             setShowCardVoacb(false)
+            }
+            } id="divItems">FlashCards</div>
      
-        <div onClick={()=>setShowCardGrammar(!ShowCardGrammar)} id="divItems">Grammar</div>{}
-        <div onClick={()=>setShowCardVoacb(!ShowCardVocab)} id="divItems">Vocab</div>{}
+        <div onClick={()=>{
+             setShowCard(false);
+             setShowCardGrammar(true)
+             setShowCardVoacb(false)
+            }
+             } id="divItems">Grammar</div>{}
+        <div onClick={()=>{ 
+            setShowCard(false);
+             setShowCardGrammar(false)
+             setShowCardVoacb(true)
+            }} id="divItems">Vocab</div>{}
+        
+        
         {ShowCard && <FlashCards />}
-        {ShowCardGrammar && ShowCard===false  && <Grammer /> }
+        {ShowCardGrammar && ShowCard ===false && <Grammer /> }
         {ShowCardVocab && ShowCardGrammar ===false &&<Voacb /> }
       </div>
       </>
