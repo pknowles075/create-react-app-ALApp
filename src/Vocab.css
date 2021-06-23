@@ -3,5 +3,6 @@ table{
 }
 table,th,td{
     margin-top:20px;
-    
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
 }
