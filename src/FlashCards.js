@@ -13,7 +13,7 @@ export const FlashCards = () => {
                     <div id="item" onClick={animalF}>June 22,2021 Animals
                     <br>
                     </br>
-                    <a id="info">nothing</a>
+                    <div id="info"></div>
                     </div>
             </div>
             
