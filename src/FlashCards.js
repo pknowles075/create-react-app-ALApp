@@ -17,7 +17,12 @@ export const FlashCards = () => {
                     <div id="flashCard" >
                         <div id="flashCardText"onClick={animalF}><span role="img" aria-label="string">📅</span>June 22,2021 Animals</div>
                         <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 Colors</div>
-                   
+                        <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 [test]</div>
+                        <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 [test]</div>
+                        <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 [test]</div>
+                        <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 [test]</div>
+                        <div id="flashCardText"onClick={colorF}><span role="img" aria-label="string">📅</span>June 22,2021 [test]</div>
+
                     <br>
                     </br>
                     <div id="info"></div>
