@@ -10,11 +10,11 @@ export const Header = () => {
         <>
              <div className="Header">
                  <div id="title">LearnArabic</div>
-        <button onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</button>{ShowCard && <FlashCards />}
+        <button onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</button>
      
-        <button id="divItems">Grammar</button>{ShowCard && <FlashCards />}
-        <button id="divItems">Vocab</button>{ShowCard && <FlashCards />}
-
+        <button id="divItems">Grammar</button>{}
+        <button id="divItems">Vocab</button>{}
+        {ShowCard && <FlashCards />}
        
       </div>
       </>
