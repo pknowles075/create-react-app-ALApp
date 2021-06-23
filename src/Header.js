@@ -4,9 +4,9 @@
     export const Header = () => {
         return (
             <div className="Header">
-               <div id="items">Home</div>
-               <div id="items">FlashCards</div>
+               <div id="items">Food</div>
+               <div id="items">Animals</div>
             </div>
         )
     }
-    export default Header
+    export default Header;

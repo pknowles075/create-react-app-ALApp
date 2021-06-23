@@ -1,9 +1,22 @@
+:root{
+    --color1:#ffffff;
+    --color2:#99aab5;
+    --color3:#2c2f33;
+    --color4:#23272a;
+    cursor: pointer;
+}
 .Header{
     color:blue;
     width:100%;
     height: 100px;
-    background-color: turquoise;
+    background-color: var(--color2);
+    flex-wrap: wrap;
 }
 .Header #items{
-    color:darkgreen;
+    float:left;
+    margin:10px 10px 10px 10px;
+    color:var(--color3);
+}
+.Header #items:hover{
+    background-color: var(--color1);
 }

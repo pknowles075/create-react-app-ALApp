@@ -1,0 +1,19 @@
+:root{
+    user-select: none;
+-moz-user-select: none;
+
+    --color1:#ffffff;
+    --color2:#99aab5;
+    --color3:#2c2f33;
+    --color4:#23272a;
+    cursor: pointer;
+}
+.main{
+    margin:auto;
+    background-color:var(--color3);
+    width:500px;
+    height: 500px;
+}
+#x{
+    font-size: 60px;
+}
