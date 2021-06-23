@@ -4,6 +4,7 @@ export const Voacb = () => {
     return (
         
             <table>
+                
                 <tr>
                     <th>Cat</th>
                     <th>qiTTa</th>
