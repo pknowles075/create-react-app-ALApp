@@ -1,12 +1,12 @@
 .main #flashCard{
-    color: white;
+    color: black;
   
     display: inline-block;
     
     margin:100px;
     width: 500px;
     height: 500px;
-    background-color: black;
+    outline: 1px solid black;
     
     }
 
