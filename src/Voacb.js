@@ -2,7 +2,7 @@ import React from 'react';
 import  "./Vocab.css";
 export const Voacb = () => {
     return (
-        
+        <div>
             <table>
                 
                 <tr>
@@ -16,7 +16,7 @@ export const Voacb = () => {
                 </tr>
 
             </table>
-      
+            </div>
     )
 }
 export default Voacb;
