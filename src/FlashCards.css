@@ -2,16 +2,15 @@
     color: white;
   
     display: inline-block;
+    
     margin: 100px;
+    margin-left: 20px;
     width: 500px;
     height: 500px;
     background-color: black;
     }
 
-#flashCardText{
-    
-    color: violet;
-}
+
 #info{
     color: violet;
     float: left;

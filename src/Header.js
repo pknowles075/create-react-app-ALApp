@@ -9,7 +9,8 @@ export const Header = () => {
     return (
         <>
              <div className="Header">
-        <button id="divItems"onClick={()=>setShowCard(!ShowCard)}>FlashCards</button>{ShowCard && <FlashCards />}
+        <button onClick={()=>setShowCard(!ShowCard)} id="divItems">FlashCards</button>{ShowCard && <FlashCards />}
+     
      
        
       </div>

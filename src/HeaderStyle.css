@@ -3,6 +3,7 @@
     --color2:#99aab5;
     --color3:#2c2f33;
     --color4:#23272a;
+    --color5:rgb(16, 41, 95);
     cursor: pointer;
 }
 .Header{
@@ -14,11 +15,11 @@
     background-color: turquoise;
 }
 #divItems{
-    margin: 10px 10px 10px 10px;
-    float:left;
-    color: yellow;
+    margin: 10px 500px 10px 10px;
+   
+    color: var(--color5);
     font-size: 25px;
-    background-color: black;
+    background-color: var(--color1);
 }
 .Header #items:hover{
     background-color: var(--color1);
