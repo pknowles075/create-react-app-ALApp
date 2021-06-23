@@ -3,6 +3,8 @@ table{
 }
 table,th,td{
     margin-top:20px;
-    color:black;
+    color:white;
     font-family: 'Courier New', Courier, monospace;
+    width:500px;
+    background-color: black;
 }
