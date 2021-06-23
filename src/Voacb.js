@@ -6,12 +6,12 @@ export const Voacb = () => {
             <table>
                 
                 <tr>
-                    <tr>Eng</tr>
+                    <th id="title">Eng</th>
                     <th>Cat</th>
                     <th>qiTTa</th>
                 </tr>
                 <tr>
-                    <tr>Arabic</tr>
+                    <th  id="title">Arbc</th>
                     <th>Dog</th>
                     <th>Kalb</th>
 
