@@ -1,4 +1,4 @@
-#flashCard{
+.main #flashCard{
     color: white;
   
     display: inline-block;
@@ -7,10 +7,12 @@
     width: 500px;
     height: 500px;
     background-color: black;
+    
     }
 
 
 #info{
     color: violet;
     float: left;
+    margin: 0px 10px ;
 }
