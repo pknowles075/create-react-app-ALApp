@@ -11,7 +11,7 @@ export const Header = () => {
     return (
         <>
              <div className="Header">
-                 <div id="title">LearnArabic</div>
+                 <div id="title">Arabic.Cloud</div>
         <div onClick={()=>{
              setShowCard(true);
              setShowCardGrammar(false)
