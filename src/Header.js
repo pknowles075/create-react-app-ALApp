@@ -3,10 +3,12 @@
     import "./HeaderStyle.css"
 import Grammer from './Grammer';
 import Voacb  from './Voacb';
+import LinkInfo from './LinkInfo';
 export const Header = () => {
     const [ShowCard,setShowCard]=useState(false);
     const [ShowCardGrammar,setShowCardGrammar]=useState(false);
     const [ShowCardVocab,setShowCardVoacb]=useState(false);
+    const [ShowLink,setShowLink]=useState(false);
 
     return (
         <>
@@ -30,11 +32,18 @@ export const Header = () => {
              setShowCardGrammar(false)
              setShowCardVoacb(true)
             }} id="divItems">Vocab</div>{}
-        
+         <div onClick={()=>{ 
+            setShowCard(false);
+             setShowCardGrammar(false)
+             setShowCardVoacb(false)
+             setShowLink(true)
+            }} id="divItems">Link</div>{}
         
         {ShowCard && <FlashCards />}
         {ShowCardGrammar && ShowCard ===false && <Grammer /> }
         {ShowCardVocab && ShowCardGrammar ===false &&<Voacb /> }
+        {ShowLink && ShowCardGrammar ===false &&<LinkInfo /> }
+      
       </div>
       </>
     )
