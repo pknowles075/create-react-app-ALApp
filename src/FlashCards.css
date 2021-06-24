@@ -24,7 +24,9 @@
 }
 #flashCard{
     float: left;
+    border:1px solid black;
     height: 1000px;
+    width: 200px;
 
 }
 #flashCardText{
@@ -61,4 +63,9 @@ h1 table td{
     width:40%;
     height: 5%;
     padding: 10px;
+}
+span{
+    color: red;
+    width: 200px;
+    text-align: left;
 }

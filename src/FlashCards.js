@@ -11,8 +11,8 @@ const[active, setActive]=useState("FinalCard")
         <div className="main">
           <h2 id="theTitle">CATEGORY ARCHIVES: LEARN ARABIC VOCABULARY</h2>
                     <div id="flashCard" >
-                        <div id="flashCardText"onClick={()=>setActive("1Card")}>One<span role="img" aria-label="string">📅</span>June 22,2021 Animal</div>
-                        <div id="flashCardText"onClick={()=>setActive("2Card")}>One<span role="img" aria-label="string">📅</span>June 22,2021 food</div>
+                        <div id="flashCardText"onClick={()=>setActive("1Card")}><span role="img" aria-label="string">📅June 23,2021 Animal</span></div>
+                        <div id="flashCardText"onClick={()=>setActive("2Card")}><span role="img" aria-label="string">📅June 23,2021 Food</span></div>
 
                     <br>
                     </br>
