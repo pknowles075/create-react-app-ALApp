@@ -12,12 +12,12 @@
 #theTitle{
     color:red;
     font-size: 20px;
-    margin: 10px 100px;
-    display: inline-block;
+    margin: 10px 500px;
     outline: 1px solid black;
     width: 100%;
 }
 #info{
+    margin: 10px 500px;
 
     display: inline-block;
     margin: 10px 10px ;
@@ -40,11 +40,9 @@
     position: absolute;
 }
 h1{
-    outline:1px solid black;
-    display: inline-block;
-    position: absolute;
-    width:500px;
-    height: 500px;
-    
-    margin: auto;
+    font-size: 20px;
+    margin: 10px 500px;
+    outline: 1px solid black;
+    width: 100%;
+
 }
