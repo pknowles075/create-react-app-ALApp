@@ -8,12 +8,20 @@ export const ColorText = () => {
             <table>
               
                 <tr>
-                    <th>Arabic</th>
                     <th>English</th>
+                    <th>Standard Arabic</th>
                 </tr>
                 <tr>
-                    <td>Kalb</td>
                     <td>Dog</td>
+                    <td>Kalb</td>
+                </tr>
+                <tr>
+                    <td>Cat</td>
+                    <td>Qut</td>
+                </tr>
+                <tr>
+                    <td>Goat</td>
+                    <td>Maiz</td>
                 </tr>
             </table>
 
