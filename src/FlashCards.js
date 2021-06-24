@@ -7,6 +7,7 @@ export const FlashCards = () => {
     const [ShowCard,setShowCard]=useState(false);
 
     return (
+        <>
         <div className="main">
           <div id="flTitle">CATEGORY ARCHIVES: LEARN ARABIC VOCABULARY</div>
                     <div id="flashCard" >
@@ -15,11 +16,12 @@ export const FlashCards = () => {
 
                     <br>
                     </br>
-                    <div id="info">{ShowCard  &&<ColorText/>}</div>
 
                     </div>
+                    <div id="info">{ShowCard  &&<ColorText/>}</div>
           
             </div>
+            </>
             
     )
 
