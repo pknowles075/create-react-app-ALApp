@@ -21,7 +21,6 @@
 
 }
 #flashCardText{
-    color: blue;
    
     margin: 10x 10px 10px 10px;
     outline: 1px solid black;
@@ -33,7 +32,6 @@
     position: absolute;
 }
 h1{
-    color:blue;
     outline:1px solid black;
     width:500px;
     height: 500px;
