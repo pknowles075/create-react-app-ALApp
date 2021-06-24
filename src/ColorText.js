@@ -5,6 +5,7 @@ export const ColorText = () => {
     return (
         
         <h1 id="infoBox">
+            Animal
             Arabic:kalab<br></br>
             Alharuf:الكلب<br></br>
             English:Dog<br></br>
