@@ -42,7 +42,7 @@ export const Header = () => {
         {ShowCard && <FlashCards />}
         {ShowCardGrammar && ShowCard ===false && <Grammer /> }
         {ShowCardVocab && ShowCardGrammar ===false &&<Voacb /> }
-        {ShowLink && ShowCardGrammar ===false &&<LinkInfo /> }
+        {ShowLink && ShowCardGrammar ===false && ShowCard===false && <LinkInfo /> }
       
       </div>
       </>
