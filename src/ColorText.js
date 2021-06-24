@@ -23,6 +23,14 @@ export const ColorText = () => {
                     <td>Goat</td>
                     <td>Maiz</td>
                 </tr>
+                <tr>
+                    <td>Cow</td>
+                    <td>Baqara</td>
+                </tr>
+                <tr>
+                    <td>Bull</td>
+                    <td>toor</td>
+                </tr>
             </table>
 
         </h1>

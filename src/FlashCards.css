@@ -9,7 +9,7 @@
     font-size: 30px;
 }
 #theTitle{
-    color:var(--color1);
+    color:white;
     font-size: 20px;
     margin: 10px 450px;
     width: 100%;
@@ -22,13 +22,19 @@
 }
 #flashCard{
     float: left;
+    font-size: 20px;
     height: 1000px;
-    width: 200px;
-
+    text-align: left;
+    
+}
+#flashCardText span{
+    color:gray;
 }
 #flashCardText{
-   
+    width: auto;
+    background-color: white;
     margin: 10px 10px 10px 10px;
+    color: var(--colorTheme1);
 }
 #info{
     font-size:10px;
