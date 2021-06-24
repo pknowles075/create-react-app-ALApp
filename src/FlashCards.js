@@ -9,7 +9,7 @@ const[active, setActive]=useState("FinalCard")
     return (
         <>
         <div className="main">
-          <div id="flTitle">CATEGORY ARCHIVES: LEARN ARABIC VOCABULARY</div>
+          <h2 id="theTitle">CATEGORY ARCHIVES: LEARN ARABIC VOCABULARY</h2>
                     <div id="flashCard" >
                         <div id="flashCardText"onClick={()=>setActive("1Card")}>One<span role="img" aria-label="string">📅</span>June 22,2021 Animal</div>
                         <div id="flashCardText"onClick={()=>setActive("2Card")}>One<span role="img" aria-label="string">📅</span>June 22,2021 food</div>
