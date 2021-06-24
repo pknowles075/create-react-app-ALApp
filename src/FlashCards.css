@@ -46,3 +46,19 @@ h1{
     width: 100%;
 
 }
+h1 table{
+    margin: auto;
+    padding: 5px ;
+}
+h1 table th{
+    height: 20%;
+    outline: 1px solid black;
+    color:rgb(74, 74, 126);
+    font-family: sans-serif;
+
+}
+h1 table td{
+    outline: 1px solid black;
+    width:40%;
+    height: 5%;
+}
