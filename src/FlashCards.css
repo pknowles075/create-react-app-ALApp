@@ -33,6 +33,10 @@
 }
 h1{
     outline:1px solid black;
+    display: inline-block;
+    position: absolute;
     width:500px;
     height: 500px;
+    
+    margin: auto
 }
