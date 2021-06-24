@@ -5,17 +5,7 @@ export const Voacb = () => {
         <div id="vD">
             <table>
                 
-                <tr>
-                    <th id="title">Eng</th>
-                    <th>Cat</th>
-                    <th>qiTTa</th>
-                </tr>
-                <tr>
-                    <th  id="title">Arbc</th>
-                    <th>Dog</th>
-                    <th>Kalb</th>
-
-                </tr>
+               not done
 
             </table>
             </div>

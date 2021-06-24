@@ -1,12 +1,7 @@
 #box{
-    color: black;
+    color: var(--colorTheme1);
   
-    display: inline-block;
-    
-    margin:100px;
-    width: 500px;
-    height: 500px;
-    
+margin:100px;
 }    
 #text{
     color:black;
