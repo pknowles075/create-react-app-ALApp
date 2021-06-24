@@ -32,3 +32,9 @@
     margin:0px 100px;
     position: absolute;
 }
+h1{
+    color:blue;
+    outline:1px solid black;
+    width:500px;
+    height: 500px;
+}
