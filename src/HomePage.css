@@ -1,0 +1,13 @@
+#TitleHome{
+    color:var(--color1);
+    width:700px;
+    height: 700px;
+    margin: auto;
+    background-color: white;
+    font-family:monospace;
+    font-size: 25px;
+}
+#TitleHome p{
+    margin:10px 10px 10px 10px;
+
+}

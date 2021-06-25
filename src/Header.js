@@ -4,47 +4,28 @@
 import Grammer from './Grammer';
 import Voacb  from './Voacb';
 import LinkInfo from './LinkInfo';
+import HomePage from './HomePage';
 export const Header = () => {
-    const [ShowCard,setShowCard]=useState(false);
-    const [ShowCardGrammar,setShowCardGrammar]=useState(false);
-    const [ShowCardVocab,setShowCardVoacb]=useState(false);
-    const [ShowLink,setShowLink]=useState(false);
+    const[active, setActive]=useState("FinalCard")
+
 
     return (
         <>
              <div className="Header">
                  <div id="title">Arabic.Cloud</div>
-        <div onClick={()=>{
-             setShowCard(true);
-             setShowCardGrammar(false)
-             setShowCardVoacb(false)
-            }
-            } id="divItems">FlashCards</div>
-     
-        <div onClick={()=>{
-             setShowCard(false);
-             setShowCardGrammar(true)
-             setShowCardVoacb(false)
-            }
-             } id="divItems">Grammar</div>{}
-        <div onClick={()=>{ 
-            setShowCard(false);
-             setShowCardGrammar(false)
-             setShowCardVoacb(true)
-            }} id="divItems">Vocab</div>{}
-         <div onClick={()=>{ 
-            setShowCard(false);
-             setShowCardGrammar(false)
-             setShowCardVoacb(false)
-             setShowLink(true)
-            }} id="divItems">Link</div>{}
+                 <div id="divItems"onClick={()=>setActive("0Card")}>Home</div>
+                        
+                        <div id="divItems"onClick={()=>setActive("1Card")}>FlashCards</div>
+                        <div id="divItems"onClick={()=>setActive("2Card")}>Grammer</div>
+                        <div id="divItems"onClick={()=>setActive("3Card")}>Voacb</div>
+                        <div id="divItems"onClick={()=>setActive("4Card")}>Link</div>
 
-        
-        {ShowCard && <FlashCards />}
-        {ShowCardGrammar && ShowCard ===false && <Grammer /> }
-        {ShowCardVocab && ShowCardGrammar ===false &&<Voacb /> }
-        {ShowLink && ShowCardGrammar ===false && ShowCard===false && <LinkInfo /> }
-      
+                    {active ==="0Card" && <HomePage/>}
+                    {active ==="1Card" && <FlashCards/>}
+                    {active ==="2Card" && <Grammer/>}
+                    {active ==="3Card" && <Voacb/>}
+                    {active ==="4Card" && <LinkInfo/>}
+
       </div>
       </>
     )
