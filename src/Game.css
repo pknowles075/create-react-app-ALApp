@@ -1,0 +1,18 @@
+#arabicText p{
+    color:var(--colorTheme1);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    outline: 1px solid gray;
+}
+#inputBox{
+    margin:50px 10px 10px 10px;
+
+}
+button{
+    margin: auto;
+    margin:10px 10px 10px 10px;
+
+    background-color:var(--colorTheme1)
+}
