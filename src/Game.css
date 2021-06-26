@@ -11,8 +11,15 @@
 
 }
 button{
+    
     margin: auto;
     margin:10px 10px 10px 10px;
 
     background-color:var(--colorTheme1)
+}
+button:hover{
+    opacity: .5;
+}
+button:focus{
+    opacity: .5;
 }

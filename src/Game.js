@@ -59,8 +59,8 @@ var CHOOSEN_TEXT_Eng=Eng_Text[selected];
         <div>Translate this</div><br></br>
         <div>"id:"{selected}</div>
         <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
-       
-        {userInput}  {username} <br />
+        {username}<br></br>
+        {userInput}   <br />
         <button onClick={Score} >Done!</button>
         <button onClick={rollIt} >New!</button>
 
