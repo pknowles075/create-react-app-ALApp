@@ -2,23 +2,22 @@ import React from 'react'
 import "./Game.css";
 import { useState } from 'react';
 
+const Arabic_Text=
+    ["احتاج طعاما","أنا أحب القطط"];
+const Eng_Text=
+    ["I love cat","I love food"];
 
-var  Random_Quote_Num=Math.floor(Math.random()*2);
+    const OFFICAL_NUM=Arabic_Text.length;
+var  Random_Quote_Num=Math.floor(Math.random()*OFFICAL_NUM);
 
 const Game = () => {
     const [selected, setSelected] = useState(Random_Quote_Num)
 
     function rollIt(){
-        const Random_Quote_Num = Math.floor(Math.random() * 2);
+        const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         setSelected(Random_Quote_Num);   
      }
-    const Arabic_Text=
-    ["أنا أحب القطط","للبيت",];
-   
-   
-    const Eng_Text=
-    ["I love cat","I go home"];
-
+    
 
 
    
@@ -56,9 +55,10 @@ var CHOOSEN_TEXT_Eng=Eng_Text[selected];
     const [username, userInput] = useInput({ type: "text" });
     return (
         <>
-        <div>Translate this</div><br></br>
-        <div>"id:"{selected}</div>
+        <div id="titleDiv"><p>Translate this</p></div><br></br>
         <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
+        <div>id:{selected}</div>
+
         {username}<br></br>
         {userInput}   <br />
         <button onClick={Score} >Done!</button>
