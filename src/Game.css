@@ -74,14 +74,18 @@ button:hover{
     width: 200px;
     height: 200px;
     margin: auto;
+    border-radius: 10%;
 }
 #titleDiv h5{
     background-color: rgb(14, 14, 212);
+
 }
 #titleDiv p{
-    color: green;
-    font-size:50px;
+    color: rgb(30, 241, 30);
+    font-size:40px;
     margin:50px 10px 10px 10px;
+    font-weight: bold;
+
 }
 #thisButton{
     
@@ -97,4 +101,7 @@ button:hover{
     color: green;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+}
+h4{
+    color: yellow;
 }
