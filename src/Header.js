@@ -15,7 +15,7 @@ export const Header = () => {
     return (
         <>
              <div className="Header">
-                 <div id="title">Arabic.Cloud</div>
+                 <div id="title">Lang.Cloud</div>
                         
                  <div id="divItems"onClick={()=>setActive("5Card")}>Game</div>
 
