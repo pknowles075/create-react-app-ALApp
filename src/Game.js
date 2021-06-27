@@ -153,11 +153,13 @@
                 <option value="French">French</option>
             </select>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
-            {username}<br></br>
-                {userInput}
-                <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button>
+               
+            <div class="mainBox"> {userInput}
 
-                <div id="titleDiv"><h5>Result</h5><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<br></br><p></p>id: {selected}</h6>
+                <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
+                <p id="username">{username}</p><br></br></div>
+
+                <div id="titleDiv"><p>Result</p><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<br></br><p></p>id: {selected}</h6>
     </div><br></br>
         
 
