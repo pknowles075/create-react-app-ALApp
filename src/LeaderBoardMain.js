@@ -1,7 +1,7 @@
 import React from 'react'
 import './LeaderBoardMain.css';
 function LeaderBoardMain() {
-    var score=localStorage.getItem('myData');
+    var score=localStorage.getItem('d');
     if(score===null){
         score="Oh no you have no score yet :("
     }

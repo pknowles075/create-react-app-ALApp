@@ -4,28 +4,38 @@
 
 
     const French_Text =
-        ["Jaime les chiens","chat damour","je mange de la viande","la plage est tres chaude"];
+        ["Jaime les chiens","chat damour","je mange de la viande","la plage est tres chaude","je bois du pepsi","au cinéma"];
     const Arabic_Text =
-        ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana"];
+        ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana","ana ashrab albibsi","ala alsiynama"];
 
 
         
     const Eng_Text =
-        ["I love dog", "love cat","I eat meat","beach is very hot"];
+        ["I love dog", "love cat","I eat meat","beach is very hot","I drink pepsi","to the movies"];
 
 
 
     const Game = () => {
-        var [currentScore, setScore] = useState(0)
-        var [currentLang, setLang] = useState("Arabic")
+        var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
+
+        if(localStorage.getItem('currentLang')===null){
+            localStorage.setItem('currentLang', currentLang);
+            
+            }
+        
+        var [currentScore, setScore] = useState(0);
+        if(localStorage.getItem('d')===null){
+            localStorage.setItem('d', 0);
+            alert("set");
+            }
+        console.log(localStorage.getItem('d'));
+
         switch(currentLang){
             case "Arabic":
                 currentLang=Arabic_Text;
-                console.log("Arabic");
                 break;
             case "French":
                 currentLang=French_Text;
-                console.log("French");
                 break;
             default:
                 currentLang=Arabic_Text;
@@ -34,11 +44,9 @@
         const OFFICAL_NUM = currentLang.length;
         var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         
-        if(localStorage.getItem('myData')===null){
-            localStorage.setItem('myData', currentScore);
-            console.log("set")
-            }
     
+
+      
                 
         const [selected, setSelected] = useState(Random_Quote_Num)
 
@@ -106,9 +114,9 @@
                 setTimeout(RemoveWrong,1000)
 
             }
-            if(localStorage.getItem('myData')<currentScore){
-                localStorage.setItem('myData', currentScore);
-                console.log("updated Score:"+localStorage.getItem('myData'))
+            if(localStorage.getItem('d')<currentScore){
+                localStorage.setItem('d', currentScore);
+                alert("updated Score:"+localStorage.getItem('d'))
 
             }
             console.log("score was calc\n"+currentScore+CORRECT)
@@ -118,6 +126,8 @@
         }
         
         function ChangeMode(sel){
+            localStorage.setItem('currentLang', sel);
+            alert(localStorage.getItem('currentLang'))
             return setLang(sel);
         }
         function useInput({ type /*...*/ }) {
@@ -135,6 +145,7 @@
             <>
             <div id="correct">Correct</div>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
+                 <option value="">Select your option</option>
                 <option value="Arabic">Arabic</option>
                 <option value="French">French</option>
             </select>
