@@ -1,5 +1,6 @@
 :root{
-  --colorTheme1:#FE8401
+  --colorTheme1:white;
+  ;
 }.App {
   text-align: center;
 }
