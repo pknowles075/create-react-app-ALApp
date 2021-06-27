@@ -47,7 +47,7 @@ const Game = () => {
             CORRECT = true;
             setScore(currentScore);
         }
-        console.log("score was calc\n"+currentScore)
+        console.log("score was calc\n"+currentScore+CORRECT)
         
         Random_Quote_Num = Math.floor(Math.random() * 2)
         return setScore(currentScore);
