@@ -128,6 +128,7 @@
         }
         
         function ChangeMode(sel){
+            rollIt();
             localStorage.setItem('currentLang', sel);
            
             return setLang(sel);
