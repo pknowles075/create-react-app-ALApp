@@ -7,7 +7,7 @@ const Arabic_Text =
     ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana"];
 
 
-
+    
 const Eng_Text =
     ["I love dog", "love cat","I eat meat","beach is very hot"];
 
@@ -15,6 +15,11 @@ const OFFICAL_NUM = Arabic_Text.length;
 var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
 
 const Game = () => {
+    var [currentScore, setScore] = useState(0)
+    if(localStorage.getItem('myData')===null){
+        localStorage.setItem('myData', currentScore);
+        console.log("set")
+        }
     const [selected, setSelected] = useState(Random_Quote_Num)
 
     function rollIt() {
@@ -34,7 +39,6 @@ const Game = () => {
     var CHOOSEN_TEXT = Arabic_Text[selected];
     var CHOOSEN_TEXT_Eng = Eng_Text[selected];
 
-    var [currentScore, setScore] = useState(0)
 
     const [value, setValue] = useState("");
     let CORRECT = false;
@@ -46,6 +50,12 @@ const Game = () => {
             currentScore =currentScore+ 100;
             CORRECT = true;
             setScore(currentScore);
+           
+        }
+        if(localStorage.getItem('myData')<currentScore){
+            localStorage.setItem('myData', currentScore);
+            console.log("updated Score:"+localStorage.getItem('myData'))
+
         }
         console.log("score was calc\n"+currentScore+CORRECT)
         

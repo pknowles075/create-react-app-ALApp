@@ -6,6 +6,7 @@ import Voacb  from './Voacb';
 import LinkInfo from './LinkInfo';
 import HomePage from './HomePage';
 import Game from './Game';
+import LeaderBoardMain from './LeaderBoardMain';
 export const Header = () => {
     const[active, setActive]=useState("FinalCard")
 
@@ -21,6 +22,7 @@ export const Header = () => {
                         <div id="divItems"onClick={()=>setActive("3Card")}>Voacb</div>
                         <div id="divItems"onClick={()=>setActive("4Card")}>Link</div>
                         <div id="divItems"onClick={()=>setActive("5Card")}>Game</div>
+                        <div id="divItems"onClick={()=>setActive("6Card")}>LeaderBoard</div>
 
                     {active ==="0Card" && <HomePage/>}
                     {active ==="1Card" && <FlashCards/>}
@@ -28,7 +30,8 @@ export const Header = () => {
                     {active ==="3Card" && <Voacb/>}
                     {active ==="4Card" && <LinkInfo/>}
                     {active ==="5Card" && <Game/>}
-
+                    {active ==="6Card" && <LeaderBoardMain/>}
+ 
       </div>
       </>
     )
