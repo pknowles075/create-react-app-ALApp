@@ -159,7 +159,7 @@
                 <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
                 <p id="username">{username}</p><br></br></div>
 
-                <div id="titleDiv"><p>Result</p><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<br></br><p></p>id: {selected}</h6>
+                <div id="titleDiv"><p>Result</p><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<p></p>id: {selected}</h6>
     </div><br></br>
         
 
