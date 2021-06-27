@@ -19,7 +19,7 @@ body{
     margin-top: 50px;
     outline: 1px solid white;
     background-color: #3f4447;
-    font-size:50px;
+    font-size:40px;
 
 }
 #inputBox{
@@ -70,13 +70,13 @@ button:hover{
 
 }
 #titleDiv{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     margin: auto;
 }
 #titleDiv h5{
-    background-color: darkblue;
+    background-color: rgb(14, 14, 212);
 }
 #titleDiv p{
     color: green;
@@ -92,4 +92,9 @@ button:hover{
     background-color: rgb(29, 122, 29);    
     border:none ;
     border-radius: 10px;
+}
+#mySelected{
+    color: green;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
