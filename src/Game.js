@@ -4,14 +4,18 @@
 
 
     const French_Text =
-        ["Jaime les chiens","chat damour","je mange de la viande","la plage est tres chaude","je bois du pepsi","au cinéma"];
+        ["Jaime les chiens","chat damour","je mange de la viande"
+        ,"la plage est tres chaude","je bois du pepsi","au cinéma","J'utilise Google","Internet est amusant",
+    "L'eau est bonne pour vous"];
     const Arabic_Text =
-        ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana","ana ashrab albibsi","ala alsiynama"];
+        ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana","ana ashrab albibsi","ala alsiynama"
+    ,"ana aistakhdim jujil","al'iintarnit mumtie","alma' jayid lak"];
 
 
         
     const Eng_Text =
-        ["I love dog", "love cat","I eat meat","beach is very hot","I drink pepsi","to the movies"];
+        ["I love dog", "love cat","I eat meat","beach is very hot","I drink pepsi","to the movies","I use google",
+    "The internet is fun","Water is good for you"];
 
 
 
@@ -26,7 +30,6 @@
         var [currentScore, setScore] = useState(0);
         if(localStorage.getItem('d')===null){
             localStorage.setItem('d', 0);
-            alert("set");
             }
         console.log(localStorage.getItem('d'));
 
@@ -116,7 +119,6 @@
             }
             if(localStorage.getItem('d')<currentScore){
                 localStorage.setItem('d', currentScore);
-                alert("updated Score:"+localStorage.getItem('d'))
 
             }
             console.log("score was calc\n"+currentScore+CORRECT)
@@ -127,7 +129,7 @@
         
         function ChangeMode(sel){
             localStorage.setItem('currentLang', sel);
-            alert(localStorage.getItem('currentLang'))
+           
             return setLang(sel);
         }
         function useInput({ type /*...*/ }) {
@@ -143,15 +145,15 @@
                 Your {CORRECT} Your score is: {currentScore}</p>
         return (
             <>
-            <div id="correct">Correct</div>
+            <div id="correct">Correct</div><br></br>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
-                 <option value="">Select your option</option>
+                 <option value="" >Select your Lang</option>
                 <option value="Arabic">Arabic</option>
                 <option value="French">French</option>
             </select>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             {username}<br></br>
-                {userInput}<br></br>
+                {userInput}
                 <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button>
 
                 <div id="titleDiv"><h5>Result</h5><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<br></br><p></p>id: {selected}</h6>
