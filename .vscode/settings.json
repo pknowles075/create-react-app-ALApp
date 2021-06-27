@@ -1,0 +1,11 @@
+{
+    "emmet.excludeLanguages": [
+    
+        "arabic"
+    ],
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "terminal.integrated.detectLocale": "off",
+    "html.suggest.html5": false,
+    "html.validate.styles": false,
+    "js/ts.implicitProjectConfig.strictFunctionTypes": false
+}
