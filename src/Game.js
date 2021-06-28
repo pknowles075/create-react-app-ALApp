@@ -167,7 +167,6 @@
         return (
             <>
             <div id="correct">Correct</div><br></br>
-            <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
 
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
@@ -195,6 +194,8 @@
                 <div id="counterC">{CorrectCOUNTER}</div>
                 </div> 
              {CHOOSEN_TEXT_Eng}
+             <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
+
     </div><br></br>
         
     <div id="learnWords">

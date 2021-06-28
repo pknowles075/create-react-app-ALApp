@@ -1,9 +1,7 @@
 body{
     background-color: #7289da;
 }
-#divItems{
-    color: #3f4447;
-}
+
 #correct{
     color:white;
     font-size: 50px;
@@ -102,9 +100,18 @@ button:hover{
 }
 #mySelected{
     margin: auto;
-    color: black;
+    color: white;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border: none;
+    text-align: center;
+}
+#mySelected option{
+    color: white;
+    text-align: center;
+    border: none;
+    outline: none;
 }
 h4{
     color: yellow;
@@ -144,6 +151,7 @@ h4{
     font-size: 20px;
 }
 #xpShow{
+    margin-top: 10px;
     font-size: 50px;
 }
 #learnWords{
