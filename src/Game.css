@@ -156,7 +156,8 @@ h4{
    margin: -600px 50px 50px 50px;  
    overflow:scroll;
     scroll-behavior: smooth;
-    
+    overflow-x: hidden;
+
    
 }
 #learnWords p{
