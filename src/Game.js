@@ -21,7 +21,10 @@
 
     const Game = () => {
        // localStorage.clear();
-
+       if(localStorage.getItem('XP')===null){
+        localStorage.setItem('XP', 0);
+        
+        }
         var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
         
         var [currentXP, setXP] = useState(localStorage.getItem('XP'))
@@ -30,10 +33,7 @@
             localStorage.setItem('currentLang', currentLang);
             
             }
-            if(localStorage.getItem('XP')===null){
-                localStorage.setItem('XP', 0);
-                
-                }
+           
         var [currentScore, setScore] = useState(0);
         if(localStorage.getItem('d')===null){
             localStorage.setItem('d', 0);
