@@ -161,7 +161,7 @@
         return (
             <>
             <div id="correct">Correct</div><br></br>
-            <div onClick={()=>{localStorage.clear();}}>Save XP,Score,etc.</div>
+            <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
 
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
