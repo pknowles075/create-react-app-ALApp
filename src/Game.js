@@ -10,7 +10,7 @@
     
     const Arabic_Text =
         ["kalba","qita","lahm","shati bahr","aflam","ana","ma",
-        "baqara","maktaba","shajara","burt","malaka","manzil"]
+        "baqara","maktaba","shajara","bab","malaka","manzil"]
 
 
         
