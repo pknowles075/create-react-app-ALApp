@@ -16,7 +16,7 @@
         
     const Eng_Text =
         ["dog", "cat","meat","beach","movies","I","water","cow"
-    ,"libary","tree","queen","house"];
+    ,"libary","tree","door","queen","house"];
 
 
     const Game = () => {
