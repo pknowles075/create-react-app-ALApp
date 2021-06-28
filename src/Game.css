@@ -58,12 +58,14 @@ button:hover{
     background-color: red;
     text-align: center;
     font-size: 20px;
+    margin-top:50px ;
     
 }
 #correctId{
     background-color: lime;
     text-align: center;
     font-size: 20px;
+    margin-top:50px ;
 
     
 }
@@ -140,4 +142,7 @@ h4{
 
     color:lime;
     font-size: 20px;
+}
+#xpShow{
+    font-size: 50px;
 }

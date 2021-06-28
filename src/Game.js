@@ -5,29 +5,31 @@
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
     const French_Text =
-        ["Jaime les chiens","chat damour","je mange de la viande"
-        ,"la plage est tres chaude","je bois du pepsi","au cinéma","J'utilise Google","Internet est amusant",
-    "L'eau est bonne pour vous"];
+        ["chiens","damour","viande","cinéma","amusant","je"];
     const Arabic_Text =
-        ["ahib kalba","hubu qita","ana akil alluhum","alshaati harin jidana","ana ashrab albibsi","ala alsiynama"
-    ,"ana aistakhdim jujil","al'iintarnit mumtie","alma' jayid lak"];
+        ["kalba","qita","lahm","shati bahr","aflam","ana"]
 
 
         
     const Eng_Text =
-        ["I love dog", "love cat","I eat meat","beach is very hot","I drink pepsi","to the movies","I use google",
-    "The internet is fun","Water is good for you"];
-
+        ["dog", "cat","meat","beach","movies","I"];
 
 
     const Game = () => {
-        var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
+       // localStorage.clear();
 
+        var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
+        
+        var [currentXP, setXP] = useState(localStorage.getItem('XP'))
+        
         if(localStorage.getItem('currentLang')===null){
             localStorage.setItem('currentLang', currentLang);
             
             }
-        
+            if(localStorage.getItem('XP')===null){
+                localStorage.setItem('XP', 0);
+                
+                }
         var [currentScore, setScore] = useState(0);
         if(localStorage.getItem('d')===null){
             localStorage.setItem('d', 0);
@@ -113,7 +115,11 @@
                 CORRECT = true;
                 setScore(currentScore);
                 ShowCorrect();
-                setTimeout(RemoveWrong,1000)
+                setTimeout(RemoveWrong,1000);
+                let i=parseInt(currentXP);
+                currentXP=i+Math.floor(Math.random()*10)+1;
+                setXP(currentXP);
+                localStorage.setItem('XP', currentXP);
 
             }
             else{
@@ -156,6 +162,7 @@
                 <option value="Arabic">Arabic</option>
                 <option value="French">French</option>
             </select>
+            <div id="xpShow">Your Level is: {currentXP}</div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
                
             <div class="mainBox"> {userInput}
@@ -174,7 +181,7 @@
                 <p id="textP">Correct</p>
                 <div id="counterC">{CorrectCOUNTER}</div>
                 </div> 
-             
+             {CHOOSEN_TEXT_Eng}
     </div><br></br>
         
 
