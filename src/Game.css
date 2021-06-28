@@ -156,13 +156,17 @@ h4{
    margin: -600px 50px 50px 50px;  
    overflow:scroll;
     scroll-behavior: smooth;
+    
    
 }
 #learnWords p{
     display: block;
+    color: black;
+    font-weight: bold;
 
 }
 #learnWords #learnWordsmyTxt{
     outline: 1px solid white;
     margin:1px 1px 1px 1px;
+    color: white;
 }
