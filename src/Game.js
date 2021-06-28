@@ -5,14 +5,18 @@
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
     const French_Text =
-        ["chiens","damour","viande","cinéma","amusant","je"];
+        ["chiens","damour","viande","plage","cinéma","je","l'eau",
+    "vache","bibliothèque","arbre","porte","reine","loger"];
+    
     const Arabic_Text =
-        ["kalba","qita","lahm","shati bahr","aflam","ana"]
+        ["kalba","qita","lahm","shati bahr","aflam","ana","ma",
+        "baqara","maktaba","shajara","burt","malaka","manzil"]
 
 
         
     const Eng_Text =
-        ["dog", "cat","meat","beach","movies","I"];
+        ["dog", "cat","meat","beach","movies","I","water","cow"
+    ,"libary","tree","queen","house"];
 
 
     const Game = () => {
@@ -142,6 +146,7 @@
             localStorage.setItem('currentLang', sel);
            
             return setLang(sel);
+            
         }
         function useInput({ type /*...*/ }) {
 
@@ -161,6 +166,7 @@
                  <option value="" >Select your Lang</option>
                 <option value="Arabic">Arabic</option>
                 <option value="French">French</option>
+
             </select>
             <div id="xpShow">Your Level is: {currentXP}</div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
