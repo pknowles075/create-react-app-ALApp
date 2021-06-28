@@ -18,9 +18,7 @@
         ["dog", "cat","meat","beach","movies","I","water","cow"
     ,"libary","tree","door","queen","house"];
 
-
     const Game = () => {
-       // localStorage.clear();
        if(localStorage.getItem('XP')===null){
         localStorage.setItem('XP', 0);
         
@@ -190,7 +188,7 @@
              {CHOOSEN_TEXT_Eng}
     </div><br></br>
         
-
+            <button onClick={()=>{localStorage.clear();}}>r</button>
             
                 
             </>
