@@ -83,6 +83,12 @@
 
     function ShowCorrect(){
         CorrectCOUNTER++;
+    
+        var  myTxt = document.createElement("DIV");
+        myTxt.innerText=CHOOSEN_TEXT;
+        myTxt.setAttribute("id","learnWordsmyTxt");
+
+        document.getElementById("CorrectSave").appendChild(myTxt);
 
     mydiv.innerHTML = "Correct";  
     mydiv.setAttribute("id","correctId");
@@ -191,7 +197,11 @@
              {CHOOSEN_TEXT_Eng}
     </div><br></br>
         
-            
+    <div id="learnWords">
+        <p id="CorrectSave" >Word list
+        </p>
+    </div>
+
                 
             </>
         )

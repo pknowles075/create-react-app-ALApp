@@ -146,3 +146,23 @@ h4{
 #xpShow{
     font-size: 50px;
 }
+#learnWords{
+
+   float: right;
+    font-size: 15px;
+   width: 200px;
+   height: 300px;
+   max-height: 500px;
+   margin: -600px 50px 50px 50px;  
+   overflow:scroll;
+    scroll-behavior: smooth;
+   
+}
+#learnWords p{
+    display: block;
+
+}
+#learnWords #learnWordsmyTxt{
+    outline: 1px solid white;
+    margin:1px 1px 1px 1px;
+}
