@@ -155,11 +155,14 @@
         var [username, userInput] = useInput({ type: "text" });
     
         const p=<p>
+
                 Your Translate {username} Correct Translate {CHOOSEN_TEXT_Eng} 
                 Your {CORRECT} Your score is: {currentScore}</p>
         return (
             <>
             <div id="correct">Correct</div><br></br>
+            <div onClick={()=>{localStorage.clear();}}>Save XP,Score,etc.</div>
+
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
                 <option value="Arabic">Arabic</option>
@@ -188,7 +191,6 @@
              {CHOOSEN_TEXT_Eng}
     </div><br></br>
         
-            <button onClick={()=>{localStorage.clear();}}>r</button>
             
                 
             </>
