@@ -117,3 +117,27 @@ h4{
 #username{
     margin:-10px;
 }
+#titleDiv #mainBoxArea{
+    margin-left: auto;
+    text-align: right;
+    margin-right: 10px;
+
+}
+#titleDiv #textP{
+    float: left;
+    color:black;
+    font-size: 20px;
+
+    margin: 0px 50px 10px 10px;
+
+}
+#titleDiv #counterW{
+    color:red;
+    font-size: 20px;
+}
+#titleDiv #counterC{
+
+
+    color:lime;
+    font-size: 20px;
+}

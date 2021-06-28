@@ -2,7 +2,8 @@
     import "./Game.css";
 
 
-
+    var CorrectCOUNTER=0;
+    var WrongCOUNTER=0;
     const French_Text =
         ["Jaime les chiens","chat damour","je mange de la viande"
         ,"la plage est tres chaude","je bois du pepsi","au cinéma","J'utilise Google","Internet est amusant",
@@ -65,6 +66,7 @@
 
 
     function ShowWrong(){
+        WrongCOUNTER++;
         mydiv.innerHTML = "Wrong";                   
         document.body.appendChild(mydiv);
     }
@@ -76,6 +78,8 @@
     }
 
     function ShowCorrect(){
+        CorrectCOUNTER++;
+
     mydiv.innerHTML = "Correct";  
     mydiv.setAttribute("id","correctId");
     document.body.appendChild(mydiv);
@@ -158,8 +162,19 @@
 
                 <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
                 <p id="username">{username}</p><br></br></div>
+                <br></br>
+                <div id="titleDiv">
+                    <p>Result</p>
+                    <p> {currentScore} CTP</p>
 
-                <div id="titleDiv"><p>Result</p><p> {currentScore} CTP</p><h6>{CHOOSEN_TEXT_Eng }<p></p>id: {selected}</h6>
+                <div id="mainBoxArea">
+                <p id="textP">Wrong</p>
+                <div id="counterW">{WrongCOUNTER}</div>
+                <br></br>
+                <p id="textP">Correct</p>
+                <div id="counterC">{CorrectCOUNTER}</div>
+                </div> 
+             
     </div><br></br>
         
 
