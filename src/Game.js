@@ -5,14 +5,15 @@
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
     const Spaninsh_Text =
-        ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","—Toto, tengo la sensación de que ya no estamos en Kansas.","'Que la fuerza esté con usted.'"
-        ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí! Estoy caminando aqui","Vuelvo enseguida","Yo decido cuando termino"];
+        ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","Que la fuerza esté con usted."
+        ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"];
     
-    const French_Text=["hi"];
+    const French_Text=["Continue de nager","Continuer de nager","Que la force soit avec toi"
+        ,"Tu me parle","Et téléphone maison","Je marche ici !","Je reviendrai","Je décide quand j'ai fini"];
         
     const Eng_Text =
-        ["Just keep swimming","Focus Speed I am speed","Toto, I've got a feeling we're not in Kansas anymore","May the Force be with you"
-        ,"You talking to me","E.T phone home","I'm walking here! I'm walking here","I'll be back","I decide when I’m done"];
+        ["Just keep swimming","Focus Speed I am speed","May the Force be with you"
+        ,"You talking to me","E.T phone home","I'm walking here!","I'll be back","I decide when I’m done"];
 
     const Game = () => {
        if(localStorage.getItem('XP')===null){
