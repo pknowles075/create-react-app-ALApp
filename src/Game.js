@@ -70,7 +70,7 @@
 
     function ShowWrong(){
         WrongCOUNTER++;
-        mydiv.innerHTML = "Wrong the correct word was "+CHOOSEN_TEXT_Eng;                   
+        mydiv.innerHTML = "Wrong the correct word was ["+CHOOSEN_TEXT_Eng+"]";                   
         document.body.appendChild(mydiv);
     }
 
@@ -142,7 +142,7 @@
             }
             else{
                 ShowWrong();
-                setTimeout(RemoveWrong,1000)
+                setTimeout(RemoveWrong,3000)
 
             }
             if(localStorage.getItem('d')<currentScore){
@@ -164,7 +164,7 @@
         }
         function useInput({ type /*...*/ }) {
 
-            const input = <input id="inputBox"value={value}  onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
+            const input = <input id="inputBox"value={value} placeholder='type the quote here!' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
             return [value, input];
         }
 
@@ -213,7 +213,10 @@
         <p id="CorrectSave" >Word list
         </p>
     </div>
-
+    <div id="AllQuotes">
+        <p id="quotesP" >{Eng_Text}
+        </p>
+    </div>
                 
             </>
         )
