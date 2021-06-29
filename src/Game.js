@@ -210,7 +210,7 @@
     </div><br></br>
         
     <div id="learnWords">
-        <p id="CorrectSave" >Word list
+        <p id="CorrectSave" >Quote list
         </p>
     </div>
     <div id="AllQuotes">
