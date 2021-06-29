@@ -41,6 +41,9 @@
             case "French":
                 currentLang=French_Text;
                 break;
+                case "English":
+                    currentLang=Eng_Text;
+                    break;
             default:
                 currentLang=Spaninsh_Text;
                 break;
@@ -179,6 +182,7 @@
                  <option value="" >Select your Lang</option>
                 <option value="Spanish">Spanish</option>
                 <option value="French">French</option>
+                <option value="English">English</option>
 
             </select>
             <div id="xpShow">Your Level is: {currentXP}</div>
