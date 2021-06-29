@@ -4,19 +4,15 @@
 
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
-    const French_Text =
-        ["chiens","damour","viande","plage","cinéma","je","l'eau",
-    "vache","bibliothèque","arbre","porte","reine","loger"];
+    const Spaninsh_Text =
+        ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","—Toto, tengo la sensación de que ya no estamos en Kansas.","'Que la fuerza esté con usted.'"
+        ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí! Estoy caminando aqui","Vuelvo enseguida","Yo decido cuando termino"];
     
-    const Arabic_Text =
-        ["kalba","qita","lahm","shati bahr","aflam","ana","ma",
-        "baqara","maktaba","shajara","bab","malaka","manzil"]
-
-
+    const French_Text=["hi"];
         
     const Eng_Text =
-        ["dog", "cat","meat","beach","movies","I","water","cow"
-    ,"libary","tree","door","queen","house"];
+        ["Just keep swimming","Focus Speed I am speed","Toto, I've got a feeling we're not in Kansas anymore","May the Force be with you"
+        ,"You talking to me","E.T phone home","I'm walking here! I'm walking here","I'll be back","I decide when I’m done"];
 
     const Game = () => {
        if(localStorage.getItem('XP')===null){
@@ -39,14 +35,14 @@
         console.log(localStorage.getItem('d'));
 
         switch(currentLang){
-            case "Arabic":
-                currentLang=Arabic_Text;
+            case "Spaninsh":
+                currentLang=Spaninsh_Text;
                 break;
             case "French":
                 currentLang=French_Text;
                 break;
             default:
-                currentLang=Arabic_Text;
+                currentLang=Spaninsh_Text;
                 break;
         }
         const OFFICAL_NUM = currentLang.length;
@@ -118,6 +114,17 @@
             CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
             username=  username.toLowerCase();
 
+            /* for(let i=0; i<username.length; i++){
+                username[i]==CHOOSEN_TEXT_Eng[i];}*/
+
+
+
+
+
+
+
+
+
             if (CHOOSEN_TEXT_Eng === username) {
                 currentScore =currentScore+ 100;
                 CORRECT = true;
@@ -170,7 +177,7 @@
 
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
-                <option value="Arabic">Arabic</option>
+                <option value="Spanish">Spanish</option>
                 <option value="French">French</option>
 
             </select>
