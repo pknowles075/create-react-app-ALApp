@@ -67,7 +67,7 @@
 
     function ShowWrong(){
         WrongCOUNTER++;
-        mydiv.innerHTML = "Wrong";                   
+        mydiv.innerHTML = "Wrong the correct word was "+CHOOSEN_TEXT_Eng;                   
         document.body.appendChild(mydiv);
     }
 
@@ -130,7 +130,7 @@
                 CORRECT = true;
                 setScore(currentScore);
                 ShowCorrect();
-                setTimeout(RemoveWrong,1000);
+                setTimeout(RemoveWrong,4000);
                 let i=parseInt(currentXP);
                 currentXP=i+Math.floor(Math.random()*10)+1;
                 setXP(currentXP);
@@ -200,7 +200,7 @@
                 <p id="textP">Correct</p>
                 <div id="counterC">{CorrectCOUNTER}</div>
                 </div> 
-             {CHOOSEN_TEXT_Eng}
+             
              <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
 
     </div><br></br>
