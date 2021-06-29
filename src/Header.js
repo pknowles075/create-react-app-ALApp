@@ -20,7 +20,7 @@ export const Header = () => {
                  <div id="divItems"onClick={()=>setActive("5Card")}>Game</div>
 
                         <div id="divItems"onClick={()=>setActive("6Card")}>LeaderBoard</div>
-
+                        <Game/>
                     {active ==="5Card" && <Game/>}
                     {active ==="6Card" && <LeaderBoardMain/>}
  
