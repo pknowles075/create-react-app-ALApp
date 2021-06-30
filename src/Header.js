@@ -17,11 +17,11 @@ export const Header = () => {
              <div className="Header">
                  <div id="title">Lang.Cloud</div>
                         
-                 <div id="divItems"onClick={()=>setActive("5Card")}>Game</div>
+                 <div id="divItems"onClick={()=>setActive("0Card")}>Game</div>
 
-                        <div id="divItems"onClick={()=>setActive("6Card")}>LeaderBoard</div>
+                        <div id="divItems"onClick={()=>setActive("1Card")}>LeaderBoard</div>
                         <Game/>
-                    {active ==="5Card" && <Game/>}
+                   {active ==="5Card" && <Game/>}
                     {active ==="6Card" && <LeaderBoardMain/>}
  
       </div>

@@ -24,7 +24,6 @@
         
         }
         var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
-        
         var [currentXP, setXP] = useState(localStorage.getItem('XP'))
         
         if(localStorage.getItem('currentLang')===null){
@@ -55,17 +54,18 @@
         const OFFICAL_NUM = currentLang.length;
         var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         
-    
+
 
       
                 
         const [selected, setSelected] = useState(Random_Quote_Num)
 
         function rollIt() {
+
             const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
             setSelected(Random_Quote_Num);
+            
         }
-
 
 
     const  mydiv = document.createElement("DIV");
@@ -171,7 +171,7 @@
             const input = <input id="inputBox"value={value} placeholder='type the quote here!' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
             return [value, input];
         }
-
+      
         var [username, userInput] = useInput({ type: "text" });
     
         const p=<p>
@@ -180,6 +180,9 @@
                 Your {CORRECT} Your score is: {currentScore}</p>
         return (
             <>
+            <div>
+                <a href="https://discord.gg/nvQ4qP5J">Link for our Discord for suggestions,comments or ideas (:</a>
+                </div>
             <div id="correct">Correct</div><br></br>
 
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
@@ -191,7 +194,7 @@
             </select>
             <div id="xpShow">Your Level is: {currentXP}</div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
-               
+            
             <div class="mainBox"> {userInput}
 
                 <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
