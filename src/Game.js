@@ -74,7 +74,7 @@
 
     function ShowWrong(){
         WrongCOUNTER++;
-        mydiv.innerHTML = "Wrong the correct word was ["+CHOOSEN_TEXT_Eng+"]";                   
+        mydiv.innerHTML = "Wrong the correct Quote was ["+CHOOSEN_TEXT_Eng+"]";                   
         document.body.appendChild(mydiv);
     }
 
