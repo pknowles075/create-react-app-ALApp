@@ -1,5 +1,5 @@
 body{
-    background-color: #7289da;
+    background-color: #323437;
 }
 
 #correct{
@@ -31,7 +31,7 @@ body{
     background-color: white;
     border-radius: 10px;
     border:none ;
-    color: gray;
+    color: black;
 
     
 
@@ -75,7 +75,7 @@ button:hover{
 #titleDiv{
     background-color: #3f4447;
     width: 300px;
-    height: 300px;
+    height: 320px;
     margin: auto;
     border-radius: 10%;
 }
@@ -125,7 +125,11 @@ h4{
 #username{
     margin:-10px;
 }
-#titleDiv #mainBoxArea{
+#titleDiv{
+    position: absolute;
+    top:30%;
+}
+#titleDiv #mainBoxArea{  
     margin-left: auto;
     text-align: right;
     margin-right: 10px;
@@ -156,13 +160,13 @@ h4{
 
 }
 #learnWords{
-
-   float: right;
+    position: absolute;
+    right:0%;
+    top: 40%;
     font-size: 15px;
    width: 200px;
    height: 300px;
    max-height: 500px;
-   margin: -600px 50px 50px 50px;  
    overflow:scroll;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -181,7 +185,8 @@ h4{
     color: white;
 }
 #AllQuotes{
- 
+    position: absolute;
+ top:100%;
 }
 #AllQuotes #quotesP{
     background-color: gray;

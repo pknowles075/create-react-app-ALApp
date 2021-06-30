@@ -181,6 +181,7 @@
         return (
             <>
             <div>
+                
                 <a href="https://discord.gg/nvQ4qP5J">Link for our Discord for suggestions,comments or ideas (:</a>
                 </div>
             <div id="correct">Correct</div>
@@ -209,9 +210,10 @@
                 <br></br>
                 <p id="textP">Correct</p>
                 <div id="counterC">{CorrectCOUNTER}</div>
+                <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
+
                 </div> 
              
-             <div onClick={()=>{localStorage.clear();}}>Reload XP,Score,etc.</div>
 
     </div><br></br>
         
