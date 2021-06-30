@@ -120,7 +120,7 @@ h4{
     height: 100%;
     outline: 1px solid white;
     margin: auto;
-    background-color: rgb(45, 45, 129,.4);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 #username{
     margin:-10px;
