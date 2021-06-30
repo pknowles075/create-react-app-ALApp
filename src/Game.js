@@ -183,8 +183,7 @@
             <div>
                 <a href="https://discord.gg/nvQ4qP5J">Link for our Discord for suggestions,comments or ideas (:</a>
                 </div>
-            <div id="correct">Correct</div><br></br>
-
+            <div id="correct">Correct</div>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
                 <option value="Spanish">Spanish</option>
