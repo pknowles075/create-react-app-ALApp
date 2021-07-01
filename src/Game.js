@@ -5,18 +5,18 @@
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
 
-    const Spanish_Words=["test"]
+    const French_Words=["vaca","porte","boire","loger","chienne"];
 
-    const French_Words=["test"]
-
-
-    const English_Words=["test"]
+    const Spanish_Words=["vache","puerta","beber","presentar","perra"];
 
 
+    const English_Words=["cow","door","drink","house","dog",];
 
 
 
-    const Spaninsh_Text =
+
+
+    const Spanish_Text =
         ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","Que la fuerza esté con usted."
         ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"
     ,"Escuche cinco, un diez está hablando"];
@@ -52,8 +52,8 @@
         console.log(localStorage.getItem('d'));
 
         if(currentMode==="quote"){switch(currentLang){
-            case "Spaninsh":
-                currentLang=Spaninsh_Text;
+            case "Spanish":
+                currentLang=Spanish_Text;
                 break;
             case "French":
                 currentLang=French_Text;
@@ -62,12 +62,13 @@
                     currentLang=Eng_Text;
                     break;
             default:
-                currentLang=Spaninsh_Text;
+                currentLang=Spanish_Text;
                 break;
         }}
         if(currentMode==="word"){
+            
             switch(currentLang){
-            case "Spaninsh":
+            case "Spanish":
                 currentLang=Spanish_Words;
                 break;
             case "French":
@@ -77,7 +78,7 @@
                     currentLang=English_Words;
                     break;
             default:
-                currentLang=Spaninsh_Text;
+                currentLang=Spanish_Text;
                 break;
             }
         }
@@ -94,7 +95,6 @@
 
             const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
             setSelected(Random_Quote_Num);
-            alert(Random_Quote_Num)
 
             
         }
@@ -131,8 +131,12 @@
     }
         var CHOOSEN_TEXT_Eng="";
         var CHOOSEN_TEXT = currentLang[selected];
-        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected];}
-        else{ CHOOSEN_TEXT_Eng = English_Words[selected];}
+        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected];
+            CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
+        }
+        else{ CHOOSEN_TEXT_Eng = English_Words[selected];
+            CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
+        }
 
 
         const [value, setValue] = useState("");
@@ -152,7 +156,6 @@
             setValue('');
         
             
-            CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
             username=  username.toLowerCase();
 
             /* for(let i=0; i<username.length; i++){
