@@ -10,7 +10,7 @@
     const Spanish_Words=["vache","puerta","beber","presentar","perra"];
 
 
-    const English_Words=["cow","door","drink","house","dog",];
+    const English_Words=["cow","door","drink","house","dog"];
 
 
 
@@ -129,7 +129,7 @@
     mydiv.setAttribute("id","correctId");
     document.body.appendChild(mydiv);
     }
-        var CHOOSEN_TEXT_Eng="";
+        var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT = currentLang[selected];
         if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected];
             CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
