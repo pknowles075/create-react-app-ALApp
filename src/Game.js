@@ -78,7 +78,7 @@
                     currentLang=English_Words;
                     break;
             default:
-                currentLang=Spanish_Text;
+                currentLang=Spanish_Words;
                 break;
             }
         }
@@ -228,7 +228,6 @@
             <a href="https://discord.gg/nvQ4qP5J">Discord</a>
             <div id="correct">Correct</div><br></br>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
-                 <option value="" >GameMode</option>
                 <option value="word">Word</option>
                 <option value="quote">Quote</option>
 
@@ -243,7 +242,7 @@
             </div>
 
             <div id="xpShow">Your Level is: {currentXP}</div>
-            <div id="showQuoteBox"><p>Random {currentMode} in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </p></div>
+            <div id="showQuoteBox">Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             
             <div class="mainBox"> {userInput}
