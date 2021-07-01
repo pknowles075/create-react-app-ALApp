@@ -122,12 +122,13 @@ button:hover{
     color: white;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: black;
+    background-color: transparent;
     border: none;
     text-align: center;
+    font-size: 30px;
 }
 #mySelected option{
-    color: white;
+    color: black;
     text-align: center;
     border: none;
     outline: none;
@@ -219,4 +220,13 @@ h4{
     text-decoration: underline; 
     font-weight: 900;
     font-family: unset;
+}
+#links{
+    flex-direction: row;
+}
+#links a{
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-family: cursive;
+    color: white;
 }

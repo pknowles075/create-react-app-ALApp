@@ -181,11 +181,10 @@
                 Your {CORRECT} Your score is: {currentScore}</p>
         return (
             <>
-            <div>
+            <div id="links">
                 
-                <a href="https://discord.gg/nvQ4qP5J">Link for our Discord for suggestions,comments or ideas (:</a>
-                </div>
-            <div id="correct">Correct</div>
+            <a href="https://discord.gg/nvQ4qP5J">Discord</a>
+            <div id="correct">Correct</div><br></br>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
                 <option value="Spanish">Spanish</option>
@@ -193,6 +192,8 @@
                 <option value="English">English</option>
 
             </select>
+            </div>
+
             <div id="xpShow">Your Level is: {currentXP}</div>
             <div id="showQuoteBox"><p>Random Quote in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </p></div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
