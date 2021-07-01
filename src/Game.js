@@ -243,7 +243,7 @@
             </div>
 
             <div id="xpShow">Your Level is: {currentXP}</div>
-            <div id="showQuoteBox"><p>Random Quote in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </p></div>
+            <div id="showQuoteBox"><p>Random {currentMode} in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </p></div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             
             <div class="mainBox"> {userInput}
