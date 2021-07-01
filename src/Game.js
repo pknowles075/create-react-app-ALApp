@@ -4,6 +4,18 @@
 
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
+
+    const Spanish_Words=["test"]
+
+    const French_Words=["test"]
+
+
+    const English_Words=["test"]
+
+
+
+
+
     const Spaninsh_Text =
         ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","Que la fuerza esté con usted."
         ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"
@@ -26,6 +38,7 @@
         var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
         var [currentXP, setXP] = useState(localStorage.getItem('XP'))
         
+        var [currentMode, setMode] = useState("quote")
 
         if(localStorage.getItem('currentLang')===null){
             localStorage.setItem('currentLang', currentLang);
@@ -38,7 +51,7 @@
             }
         console.log(localStorage.getItem('d'));
 
-        switch(currentLang){
+        if(currentMode==="quote"){switch(currentLang){
             case "Spaninsh":
                 currentLang=Spaninsh_Text;
                 break;
@@ -51,8 +64,24 @@
             default:
                 currentLang=Spaninsh_Text;
                 break;
+        }}
+        if(currentMode==="word"){
+            switch(currentLang){
+            case "Spaninsh":
+                currentLang=Spanish_Words;
+                break;
+            case "French":
+                currentLang=French_Words;
+                break;
+                case "English":
+                    currentLang=English_Words;
+                    break;
+            default:
+                currentLang=Spaninsh_Text;
+                break;
+            }
         }
-        const OFFICAL_NUM = currentLang.length;
+        const OFFICAL_NUM = currentLang.length-1;
         var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         
 
@@ -65,6 +94,8 @@
 
             const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
             setSelected(Random_Quote_Num);
+            alert(Random_Quote_Num)
+
             
         }
 
@@ -98,8 +129,10 @@
     mydiv.setAttribute("id","correctId");
     document.body.appendChild(mydiv);
     }
+        var CHOOSEN_TEXT_Eng="";
         var CHOOSEN_TEXT = currentLang[selected];
-        var CHOOSEN_TEXT_Eng = Eng_Text[selected];
+        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected];}
+        else{ CHOOSEN_TEXT_Eng = English_Words[selected];}
 
 
         const [value, setValue] = useState("");
@@ -167,6 +200,12 @@
             return setLang(sel);
             
         }
+        function ChangeModeDiff(sel){
+            rollIt();
+            return setMode(sel);
+
+
+        }
         function useInput({ type /*...*/ }) {
 
             const input = <input id="inputBox"value={value} placeholder='type the quote here!' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
@@ -185,6 +224,12 @@
                 
             <a href="https://discord.gg/nvQ4qP5J">Discord</a>
             <div id="correct">Correct</div><br></br>
+            <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
+                 <option value="" >GameMode</option>
+                <option value="word">Word</option>
+                <option value="quote">Quote</option>
+
+            </select>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
                  <option value="" >Select your Lang</option>
                 <option value="Spanish">Spanish</option>
