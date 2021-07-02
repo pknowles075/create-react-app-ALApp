@@ -140,12 +140,15 @@ button:hover{
     border: none;
     text-align: center;
     font-size: 30px;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    margin-left: 10px;
+
 }
 #mySelected option{
     color: black;
     text-align: center;
-    border: none;
-    outline: none;
 }
 h4{
     color: var(--FG);
