@@ -172,7 +172,7 @@
                 CORRECT = true;
                 setScore(currentScore);
                 ShowCorrect();
-                setTimeout(RemoveWrong,4000);
+                setTimeout(RemoveWrong,2500);
                 let i=parseInt(currentXP);
                 currentXP=i+Math.floor(Math.random()*10)+1;
                 setXP(currentXP);
