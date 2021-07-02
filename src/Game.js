@@ -245,7 +245,7 @@
             </select>
             </div>
 
-            <div id="xpShow">Your Level is: {currentXP}</div>
+            <div id="xpShow"></div>
             <div id="showQuoteBox"><d>Random</d><p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             
