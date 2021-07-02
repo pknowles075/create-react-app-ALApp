@@ -106,7 +106,7 @@
 
     function ShowWrong(){
         WrongCOUNTER++;
-        mydiv.innerHTML = "Wrong the correct Quote was ["+CHOOSEN_TEXT_Eng+"]";                   
+        mydiv.innerHTML = "Wrong the correct Quote was ["+CHOOSEN_TEXT_Eng.toUpperCase()+"]";                   
         document.body.appendChild(mydiv);
     }
 
@@ -131,9 +131,9 @@
     }
         var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT = currentLang[selected];
-        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();;
+        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
         }
-        else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();;
+        else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();
         }
 
 
