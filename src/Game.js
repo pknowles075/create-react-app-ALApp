@@ -131,11 +131,9 @@
     }
         var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT = currentLang[selected];
-        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected];
-            CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
+        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();;
         }
-        else{ CHOOSEN_TEXT_Eng = English_Words[selected];
-            CHOOSEN_TEXT_Eng= CHOOSEN_TEXT_Eng.toLowerCase();
+        else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();;
         }
 
 
@@ -204,8 +202,13 @@
             
         }
         function ChangeModeDiff(sel){
-            rollIt();
+            if(sel==="Gamemode"){
+                
+            }
+            else{
+                rollIt();
             return setMode(sel);
+            }
 
 
         }
@@ -228,6 +231,8 @@
             <a href="https://discord.gg/nvQ4qP5J">Discord</a>
             <div id="correct">Correct</div><br></br>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
+            <option value="" >Gamemode</option>
+
                 <option value="word">Word</option>
                 <option value="quote">Quote</option>
 
