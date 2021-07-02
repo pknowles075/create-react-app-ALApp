@@ -18,16 +18,16 @@
 
     const Spanish_Text =
         ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","Que la fuerza esté con usted."
-        ,"Me hablas","E.T teléfono de casa","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"
+        ,"Me hablas","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"
     ,"Escuche cinco, un diez está hablando"];
     
     const French_Text=["Continue de nager","Continuer de nager","Que la force soit avec toi"
-        ,"Tu me parle","E.T téléphone maison","Je marche ici !","Je reviendrai","Je décide quand j'ai fini",
+        ,"Tu me parle","Je marche ici !","Je reviendrai","Je décide quand j'ai fini",
     "Écoute cinq, un dix parle"];
         
     const Eng_Text =
         ["Just keep swimming","Focus Speed I am speed","May the Force be with you"
-        ,"You talking to me","E.T phone home","I'm walking here!","I'll be back","I decide when I’m done"
+        ,"You talking to me","I'm walking here!","I'll be back","I decide when I’m done"
         ,"Listen up fives, a ten is speaking"];
 
     const Game = () => {
