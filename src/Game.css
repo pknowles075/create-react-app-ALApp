@@ -1,8 +1,10 @@
 :root{
     --y:(#e2b714);
+    --FGd:rgb(46,125,50);;
+
 }
 body{
-    background-color: #323437;
+    background-color:white;
 }
 
 #correct{
@@ -12,16 +14,20 @@ body{
     margin: 0px 40%;
     display: none;
 }
+#arabicText{
+
+}
 #arabicText p{
     font-family: Comfortaa;
     font-weight: 300;
-    color:#e2b714;
+    color:var(--FG);
     width: 500px;
     height: 100px;
     margin: auto;
     margin-bottom: 15px;
-    background-color: #3f4447;
+    background-color: white;
     font-size:40px;
+    border:1px solid black ;
 
 }
 #inputBox{
@@ -35,8 +41,9 @@ body{
     font-size: 30px;
     background-color: white;
     border-radius: 10px;
-    border:none ;
+    border:1px solid black ;
     color: black;
+
 
     
 
@@ -46,7 +53,7 @@ button{
     margin: auto;
     margin:10px 10px 10px 10px;
 
-    background-color:var(--colorTheme1)
+    background-color:white;
 }
 button:hover{
     opacity: .5;
@@ -83,10 +90,11 @@ button:hover{
     height: 320px;
     margin: auto;
     border-radius: 10%;
-    color: #e2b714;
+    color: var(--FG);
+    
 }
 #showQuoteBox{
-    background-color: #e2b714;
+    background-color: var(--FG);;
     height: 50px;
     width: 500px;
     margin: auto;
@@ -94,16 +102,22 @@ button:hover{
     color: black;
     font-size: 20px;
     text-align: left;
-
+    margin-bottom: .5px;
+    border:1px solid black ;
+    
+}
+#showQuoteBox d{
+    margin-left: 2px;
 }
 #showQuoteBox p{
-    
+    margin:10px 1px 1px 1px;
+
     font-weight: 600;
     margin: 20px 20px 0px 10px;
 }
 
 #titleDiv p{
-    color: #e2b714;
+    color: var(--FG);;
     font-size:40px;
     margin:50px 10px 10px 10px;
 }
@@ -112,7 +126,7 @@ button:hover{
     position: relative;
     width: 60px;
     height: 60px;
-    background-color: #e2b714;
+    background-color: var(--FG);;
     border:none ;
     border-radius: 10px;
     bottom:5px;
@@ -134,7 +148,7 @@ button:hover{
     outline: none;
 }
 h4{
-    color: #e2b714;
+    color: var(--FG);
 }
 .mainBox{
     width: 500px;
@@ -198,6 +212,7 @@ h4{
     display: block;
     color: black;
     font-weight: bold;
+    
 
 }
 #learnWords #learnWordsmyTxt{
@@ -208,15 +223,17 @@ h4{
 #AllQuotes{
     position: absolute;
  top:100%;
+
 }
 #AllQuotes #quotesP{
     background-color: gray;
     font-size: 15px;
     color: black;
+    margin:1px 1px 1px 1px;
 }
 #currentLang{
     display: inline;
-    color: blue;
+    color: white;
     text-decoration: underline; 
     font-weight: 900;
     font-family: unset;

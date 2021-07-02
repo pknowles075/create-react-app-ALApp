@@ -228,7 +228,6 @@
             <>
             <div id="links">
                 
-            <a href="https://discord.gg/nvQ4qP5J">Discord</a>
             <div id="correct">Correct</div><br></br>
             <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
             <option value="" >Gamemode</option>
@@ -247,7 +246,7 @@
             </div>
 
             <div id="xpShow">Your Level is: {currentXP}</div>
-            <div id="showQuoteBox">Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
+            <div id="showQuoteBox"><d>Random</d><p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             
             <div class="mainBox"> {userInput}
