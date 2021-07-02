@@ -22,7 +22,7 @@
     ,"Escuche cinco, un diez está hablando"];
     
     const French_Text=["Continue de nager","Continuer de nager","Que la force soit avec toi"
-        ,"Tu me parle","Et téléphone maison","Je marche ici !","Je reviendrai","Je décide quand j'ai fini",
+        ,"Tu me parle","E.T téléphone maison","Je marche ici !","Je reviendrai","Je décide quand j'ai fini",
     "Écoute cinq, un dix parle"];
         
     const Eng_Text =
