@@ -139,12 +139,13 @@ button:hover{
     font-family: 'Times New Roman', Times, serif;
     background-color: transparent;
     border: none;
-    text-align: center;
     font-size: 30px;
     width: 300px;
     height: auto;
     border: 1px solid black;
     margin-left: 10px;
+    text-align: right;
+    padding: 2px;
 
 }
 #mySelected option{
