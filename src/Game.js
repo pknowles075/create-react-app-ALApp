@@ -1,7 +1,9 @@
     import React, { useState } from 'react';
     import "./Game.css";
-
-
+    import { a } from "./Spanish.js"
+    import {Portugese_Text} from "./Portuguese.js"
+    import {eng} from "./English.js"
+    import {french} from "./French.js"
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
 
@@ -12,25 +14,19 @@
 
     const English_Words=["cow","door","drink","house","dog"];
 
-
-
-
-
-    const Spanish_Text =
-        ["solo sigue nadando","Enfocar Velocidad Yo soy velocidad","Que la fuerza esté con usted."
-        ,"Me hablas","¡Estoy caminando aquí!","Vuelvo enseguida","Yo decido cuando termino"
-    ,"Escuche cinco, un diez está hablando"];
     
-    const French_Text=["Continue de nager","Continuer de nager","Que la force soit avec toi"
-        ,"Tu me parle","Je marche ici !","Je reviendrai","Je décide quand j'ai fini",
-    "Écoute cinq, un dix parle"];
+    const Spanish_Text =a;
+    
+    const Portugese=Portugese_Text;
+    
+    const French_Text=french;
         
-    const Eng_Text =
-        ["Just keep swimming","Focus Speed I am speed","May the Force be with you"
-        ,"You talking to me","I'm walking here!","I'll be back","I decide when I’m done"
-        ,"Listen up fives, a ten is speaking"];
-
+    const Eng_Text =eng;
+  
+            
     const Game = () => {
+
+
        if(localStorage.getItem('XP')===null){
         localStorage.setItem('XP', 0);
         
@@ -58,11 +54,15 @@
             case "French":
                 currentLang=French_Text;
                 break;
-                case "English":
-                    currentLang=Eng_Text;
-                    break;
+            case "English":
+                currentLang=Eng_Text;
+                break;
+            case "Portugese":
+                currentLang=Portugese;
+                break;
             default:
                 currentLang=Spanish_Text;
+                console.log("default");
                 break;
         }}
         if(currentMode==="word"){
@@ -74,15 +74,21 @@
             case "French":
                 currentLang=French_Words;
                 break;
-                case "English":
-                    currentLang=English_Words;
-                    break;
+            case "English":
+                currentLang=English_Words;
+                break;
+            case "Portugese":
+                currentLang=Portugese;
+                break;
             default:
                 currentLang=Spanish_Words;
+                console.log("default");
                 break;
             }
         }
-        const OFFICAL_NUM = currentLang.length-1;
+        const OFFICAL_NUM = currentLang.length;
+       
+
         var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         
 
@@ -131,10 +137,15 @@
     }
         var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT = currentLang[selected];
-        if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
+        try{if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
         }
         else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();
         }
+    }
+    catch(e){
+        console.log('Error has happened');
+        window.location.reload();
+    }
 
 
         const [value, setValue] = useState("");
@@ -241,15 +252,16 @@
                 <option value="Spanish">Spanish</option>
                 <option value="French">French</option>
                 <option value="English">English</option>
+                <option value="Portugese">Portugese</option>
 
             </select>
             </div>
 
             <div id="xpShow"></div>
-            <div id="showQuoteBox"><d>Random</d><p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
+            <div id="showQuoteBox">Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
             <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
             
-            <div class="mainBox"> {userInput}
+            <div className="mainBox"> {userInput}
 
                 <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
                 <p id="username">{username}</p><br></br></div>
