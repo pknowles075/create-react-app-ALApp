@@ -6,6 +6,5 @@ const Portugese_Text= [
     "Estou caminhando aqui!",
     "Eu voltarei",
     "Eu decido quando terminar",
-    "Ouça cinco, um dez está falando"
 ];
 export  {Portugese_Text}
