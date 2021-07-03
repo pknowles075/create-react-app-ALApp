@@ -1,8 +1,11 @@
 const Portugese_Text= [
-    "This is 1",
-    "This is 2",
-    "This is 3",
-    "This is 4",
-    "This is 5",
+    "Continue nadando",
+    "Velocidade de foco, eu sou velocidade",
+    "Que a força esteja com você",
+    "Você falando comigo",
+    "Estou caminhando aqui!",
+    "Eu voltarei",
+    "Eu decido quando terminar",
+    "Ouça cinco, um dez está falando"
 ];
 export  {Portugese_Text}
