@@ -1,9 +1,14 @@
-    import React, { useState } from 'react';
+    import React, { useState,/*useEffect*/ } from 'react';
     import "./Game.css";
     import { a } from "./Spanish.js"
     import {Portugese_Text} from "./Portuguese.js"
     import {eng} from "./English.js"
     import {french} from "./French.js"
+    //import axios from 'axios';
+    import data from "./Example.json"
+    
+
+   
     var CorrectCOUNTER=0;
     var WrongCOUNTER=0;
 
@@ -26,6 +31,14 @@
             
     const Game = () => {
 
+    
+        let x=JSON.stringify(data);
+        let z=Math.floor(Math.random()*5)
+        let y=JSON.parse(x);
+        var count = Object.keys(y).length;
+        console.log("quote "+(y[z]["quote"]));
+        console.log("Length:"+count);
+        console.log("answer "+(y[z]["answer"]));
 
        if(localStorage.getItem('XP')===null){
         localStorage.setItem('XP', 0);
