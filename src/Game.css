@@ -41,8 +41,7 @@ body{
     height: 50px;
     font-size: 30px;
     background-color: white;
-    border-radius: 10px;
-    border:1px solid black ;
+
     color: black;
 
 
@@ -126,6 +125,7 @@ button:hover{
     font-size:20px;
     margin-bottom: 0px;
     margin-top: 0px;
+    
 }
 #thisButton{
     
@@ -136,6 +136,13 @@ button:hover{
     border:none ;
     border-radius: 10px;
     bottom:5px;
+}
+#toggler{
+    background-color: black;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
 }
 #mySelected{
     margin: auto;
@@ -161,7 +168,6 @@ h4{
     color: var(--FG);
 }
 .mainBox{
-    outline: 1px solid ;
     
 }
 #username{
@@ -178,7 +184,7 @@ h4{
 }
 #titleDiv #textP{
     float: left;
-    color:black;
+    color:forestgreen;
     font-size: 16px;
     margin-left: 10px;
 
@@ -223,7 +229,7 @@ h4{
 #learnWords #learnWordsmyTxt{
     outline: 1px solid black;
     margin:1px 1px 1px 1px;
-    color: black;
+    color: forestgreen;
 }
 #AllQuotes{
     position: absolute;

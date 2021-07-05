@@ -22,6 +22,25 @@ const Game = () => {
     }
     var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
    
+    var [currentTheme, setTheme] = useState(true)
+    const toggleTrueFalse = () => {
+        setTheme(!currentTheme) 
+        switch(currentTheme){
+        
+            case true:
+                document.body.style.backgroundColor="black";
+                document.getElementById("titleDiv").style.outline="1px solid white";
+                break;
+            default:
+                document.body.style.backgroundColor="white";
+                break;
+            }
+        };
+
+   
+
+
+
     switch(currentLang){
         case "german":
             currentLang=german;
@@ -242,6 +261,7 @@ function runner(event){
 
         </select>
         </div>
+        <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
 
         <div id="titleDiv">
                 <p> {currentScore} Score</p>
