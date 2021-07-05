@@ -69,7 +69,8 @@ button:hover{
     background-color: red;
     text-align: center;
     font-size: 20px;
-    top:100px ;
+    top:100px;
+    margin: auto;
     
 }
 #correctId{
@@ -86,13 +87,15 @@ button:hover{
 
 }
 #titleDiv{
-    width: 300px;
-    height: 320px;
+    width: 500px;
+    height: 100px;
     margin: auto;
-    border-radius: 10%;
     color: var(--FG);
-    border:solid black;
+    border:solid 1px black;
+    margin-top: 40px;
+    margin-bottom: 10px;
     
+
 }
 #showQuoteBox{
     background-color: var(--FG);;
@@ -118,9 +121,11 @@ button:hover{
 }
 
 #titleDiv p{
-    color: var(--FG);;
-    font-size:40px;
-    margin:50px 10px 10px 10px;
+    color: var(--FG);
+
+    font-size:20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 #thisButton{
     
@@ -156,17 +161,14 @@ h4{
     color: var(--FG);
 }
 .mainBox{
-    width: 500px;
-    height: 100%;
-    outline: 1px solid white;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.4);
+    outline: 1px solid ;
+    
 }
 #username{
     margin:-10px;
 }
 #titleDiv{
-  
+
 }
 #titleDiv #mainBoxArea{  
     margin-left: auto;
@@ -177,20 +179,20 @@ h4{
 #titleDiv #textP{
     float: left;
     color:black;
-    font-size: 20px;
+    font-size: 16px;
+    margin-left: 10px;
 
-    margin: 0px 50px 10px 10px;
 
 }
 #titleDiv #counterW{
     color:red;
-    font-size: 20px;
+    font-size: 16px;
 }
 #titleDiv #counterC{
 
 
     color:lime;
-    font-size: 20px;
+    font-size: 16px;
 }
 #xpShow{
 
