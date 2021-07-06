@@ -143,7 +143,6 @@ document.body.appendChild(mydiv);
     var CHOOSEN_TEXT_Eng;
         
     var CHOOSEN_TEXT = currentQuote;
-    var Hello=CHOOSEN_TEXT;
     try{if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
     }
     else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();
@@ -278,7 +277,7 @@ function runner(event){
 
 </div>
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
-        <div id="arabicText"><p id="currentChoice">{Hello}<div style={{fontWeight:"bold"}}>{CurrentWord}</div></p>
+        <div id="arabicText"><p id="currentChoice">{CHOOSEN_TEXT}<p style={{fontWeight:"bold"}}>{CurrentWord}</p></p>
 </div>
         
         <div className="mainBox"> {userInput}
