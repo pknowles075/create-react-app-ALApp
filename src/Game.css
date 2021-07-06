@@ -99,7 +99,7 @@ button:hover{
     margin: auto;
     color: var(--FG);
     margin-top: 10px;
-    background-color: rgb(122, 119, 119);
+    background-color: rgb(122, 119, 119,.5);
 
 }
 #showQuoteBox{
