@@ -12,7 +12,9 @@ export const Header = () => {
 
    
     return (
-        <>
+
+      <>
+  <meta name="viewport" content="width=1000"></meta>
              <div className="Header">
                  <div id="title">Lang.Cloud</div>
                         
