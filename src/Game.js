@@ -97,7 +97,7 @@ const Game = () => {
     var CurrentAnswer = y[selected]["answer"];
 
     var CurrentWordnotDiv=y[selected]["word"]
-    var CurrentWord = <div style={{color:"red",fontWeight:"bold"}}>{CurrentWordnotDiv}</div>;
+    var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
 
 
 
