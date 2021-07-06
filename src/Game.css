@@ -20,29 +20,34 @@ body{
 #arabicText p{
     font-family: Helvetica ;
     font-weight: 300;
-    color:var(--FG);
+    color:white;
     width: 500px;
     height: 100px;
     margin: auto;
+    background-color: #9954bb;
     margin-bottom: 15px;
-    background-color: white;
     font-size:40px;
-    border:1px solid black ;
+    outline:none;
+    border:none;
+    margin-top: 10px;
+    border-radius: 10px;
 
 }
 #inputBox{
     padding:10px;
 
     margin:10px 10px 10px 10px;
-    opacity: 1;
+
     background: transparent;
     outline:none;
+    border:none;
     width: 300px;
     height: 50px;
     font-size: 30px;
-    background-color: white;
-
+    background-color: #9954bb;
+    border-radius: 10px;
     color: black;
+
 
 
     
@@ -70,6 +75,9 @@ button:hover{
     font-size: 20px;
     top:100px;
     margin: auto;
+    margin-top: 45px;
+
+
     
 }
 #correctId{
@@ -86,14 +94,13 @@ button:hover{
 
 }
 #titleDiv{
-    width: 500px;
-    height: 100px;
+    width: 100%;
+    height: 60px;
     margin: auto;
     color: var(--FG);
     border:solid 1px black;
-    margin-top: 40px;
     margin-bottom: 10px;
-    
+    background-color: rgb(122, 119, 119);
 
 }
 #showQuoteBox{
@@ -106,11 +113,13 @@ button:hover{
     font-size: 20px;
     text-align: left;
     margin-bottom: .5px;
-    border:1px solid black ;
+    outline:none;
+    border:none;
     
 }
-#showQuoteBox d{
-    margin-left: 2px;
+#showQuoteBox ul{
+    margin-left: 70px;
+
 }
 #showQuoteBox p{
     margin:10px 1px 1px 1px;
@@ -137,6 +146,7 @@ button:hover{
     border-radius: 10px;
     bottom:5px;
 }
+
 #toggler{
     background-color: black;
     outline: none;
@@ -154,10 +164,12 @@ button:hover{
     font-size: 30px;
     width: 300px;
     height: auto;
-    border: 1px solid black;
     margin-left: 10px;
     text-align: right;
     padding: 2px;
+    background-color: rgb(26, 172, 26);
+    outline: none;
+    border-radius: 10px;
 
 }
 #mySelected option{
@@ -184,21 +196,27 @@ h4{
 }
 #titleDiv #textP{
     float: left;
-    color:forestgreen;
-    font-size: 16px;
-    margin-left: 10px;
+    text-align: center;
+    color:black;
+    font-size: 30px;
+    margin-left: 350px;
+    font-weight: 900;
 
 
 }
 #titleDiv #counterW{
     color:red;
-    font-size: 16px;
+    font-size: 30px;
+    margin-left: 10px;
+    float: left;
+
 }
 #titleDiv #counterC{
-
-
     color:lime;
-    font-size: 16px;
+    font-size: 30px;
+    margin-left: 10px;
+    float: left;
+
 }
 #xpShow{
 
@@ -239,7 +257,7 @@ h4{
 #AllQuotes #quotesP{
     display: none;
 
-    background-color: gray;
+    background-color: black;
     font-size: 15px;
     color: black;
     margin:1px 1px 1px 1px;

@@ -229,7 +229,7 @@ function runner(event){
     }
     function useInput({ type /*...*/ }) {
 
-        const input = <input id="inputBox"value={value} placeholder='type the quote here!' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
+        const input = <input id="inputBox"value={value} placeholder='...' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
         return [value, input];
     }
   
@@ -264,12 +264,10 @@ function runner(event){
         <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
 
         <div id="titleDiv">
-                <p> {currentScore} Score</p>
 
             <div id="mainBoxArea">
             <p id="textP">Wrong</p>
             <div id="counterW">{WrongCOUNTER}</div>
-            <br></br>
             <p id="textP">Correct</p>
             <div id="counterC">{CorrectCOUNTER}</div>
 
@@ -277,7 +275,7 @@ function runner(event){
          
 
 </div>
-        <div id="showQuoteBox">Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p> </div>
+        <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
         <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
         
         <div className="mainBox"> {userInput}

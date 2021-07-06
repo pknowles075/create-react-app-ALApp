@@ -25,6 +25,7 @@
     height: 100px;
     font-size: 25px;
     margin:10px 10px 0 10px;
+    background-color: darkgreen;
 }
 .Header #divItems:hover{
     opacity: .5;
