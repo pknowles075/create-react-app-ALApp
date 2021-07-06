@@ -255,7 +255,6 @@ function runner(event){
              <option value="" >Select your Lang</option>
             <option value="spanish">Spanish</option>
             <option value="french">French</option>
-            <option value="english">English</option>
             <option value="portugese">Portugese</option>
             <option value="german">German</option>
 
