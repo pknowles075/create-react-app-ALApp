@@ -13,8 +13,11 @@
 .Header{
     color: white;
     width: 100%;
-    height: 120px;
+    height: 121px;
     background-color: #4caf50;
+    border:2px solid black;
+    outline: none;
+    margin-bottom: 10px;
   
 
 }
@@ -22,10 +25,10 @@
     display: inline;
     color: white;
     width:100px;
-    height: 100px;
+    height: 10px;
     font-size: 25px;
     margin:10px 10px 0 10px;
-    background-color: darkgreen;
+    background-color: red;
 }
 .Header #divItems:hover{
     opacity: .5;
