@@ -67,6 +67,7 @@ body{
     
 
 }
+
 button{
     
     margin: auto;
@@ -304,4 +305,7 @@ h4{
     font-size: 20px;
     font-family: cursive;
     color: white;
+}
+#arabicText #currentWord{
+    color: red;
 }
