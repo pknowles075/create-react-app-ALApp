@@ -277,7 +277,7 @@ function runner(event){
 
 </div>
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
-        <div id="arabicText"><p id="currentChoice">{CHOOSEN_TEXT}<p style={{fontWeight:"bold"}} id="currentWord">{CurrentWord}</p></p>
+        <div id="arabicText"><p id="currentChoice">{CHOOSEN_TEXT}<div style={{fontWeight:"bold"}} id="currentWord">{CurrentWord}</div></p>
 </div>
         
         <div className="mainBox"> {userInput}
