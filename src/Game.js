@@ -96,7 +96,8 @@ const Game = () => {
     
     var CurrentAnswer = y[selected]["answer"];
 
-    var CurrentWord = y[selected]["word"];
+    var CurrentWordnotDiv=y[selected]["word"]
+    var CurrentWord = <div style={{color:"red",fontWeight:"bold"}}>{CurrentWordnotDiv}</div>;
 
 
 
@@ -277,7 +278,7 @@ function runner(event){
 
 </div>
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
-        <div id="arabicText"><p id="currentChoice">{CHOOSEN_TEXT}<br></br><div id="currentWord">{CurrentWord}</div></p>
+        <div id="arabicText" style={{color:"red"}}><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
 </div>
         
         <div className="mainBox"> {userInput}
