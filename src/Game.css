@@ -18,7 +18,8 @@ body{
 
 }
 #arabicText p{
-    font-family: Helvetica ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:10px 10px 10px 10px;
     font-weight: 300;
     color:white;
     width: 500px;
@@ -31,6 +32,7 @@ body{
     border:none;
     margin-top: 10px;
     border-radius: 10px;
+    font-size: 20px;
 
 }
 #inputBox{
@@ -46,9 +48,10 @@ body{
     font-size: 30px;
     background-color: #9954bb;
     border-radius: 10px;
-    color: black;
+    color: white;
 
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:10px 10px 10px 10px;
 
     
 

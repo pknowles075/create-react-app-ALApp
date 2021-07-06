@@ -1,7 +1,7 @@
 [
-    {"quote":"german1","answer":"eng1"},
-    {"quote":"german2","answer":"eng2"},
-    {"quote":"german3","answer":"eng3"},
-    {"quote":"german4","answer":"eng4"},
-    {"quote":"german5","answer":"eng5"}
+    {"quote":"Alles was wir sehen traum im traum","answer":"dream","word":"traum"},
+    {"quote":"Aber der Mensch ist nicht für Niederlagen geschaffen Ein Mann kann zerstört aber nicht besiegt werden","answer":"der","word":"der"},
+    {"quote":"Mit geballter Faust kann man sich nicht die Hand schütteln","answer":"fist","word":"schütteln"},
+    {"quote":"Mut ist zu wissen, was man nicht fürchten muss","answer":"fear","word":"muss"},
+    {"quote":"Das Geheimnis des Glücks ist Freiheit","answer":"freedom","word":"Freiheit"}
 ]

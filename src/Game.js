@@ -17,8 +17,8 @@ const Eng_Text =eng;
 
         
 const Game = () => {
+
     if(localStorage.getItem('currentLang')===null){
-        localStorage.setItem('currentLang',"spanish");
     }
     var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
    
@@ -96,6 +96,7 @@ const Game = () => {
     
     var CurrentAnswer = y[selected]["answer"];
 
+    var CurrentWord = y[selected]["word"];
 
 
 
@@ -140,7 +141,9 @@ mydiv.setAttribute("id","correctId");
 document.body.appendChild(mydiv);
 }
     var CHOOSEN_TEXT_Eng;
+        
     var CHOOSEN_TEXT = currentQuote;
+    var Hello=CHOOSEN_TEXT;
     try{if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
     }
     else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();
@@ -252,7 +255,7 @@ function runner(event){
 
         </select>
         <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeMode(val.target.value)}>
-             <option value="" >Select your Lang</option>
+             <option value="" disabled>Select your Lang</option>
             <option value="spanish">Spanish</option>
             <option value="french">French</option>
             <option value="portugese">Portugese</option>
@@ -275,7 +278,8 @@ function runner(event){
 
 </div>
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
-        <div id="arabicText"><p>{CHOOSEN_TEXT}</p></div>
+        <div id="arabicText"><p id="currentChoice">{Hello}<div style={{fontWeight:"bold"}}>{CurrentWord}</div></p>
+</div>
         
         <div className="mainBox"> {userInput}
 
