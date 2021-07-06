@@ -307,4 +307,5 @@ h4{
 }
 #arabicText #currentWord{
     color: red;
+    font-weight: bold;
 }
