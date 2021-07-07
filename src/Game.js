@@ -18,6 +18,8 @@ const Eng_Text =eng;
 const Game = () => {
     const [style, setStyle] = useState({display: 'none'});
 
+    const [toggleStyle, settoggleStyle] = useState(false);
+
     if(style.display==="inline-block"){
         document.body.style.opacity=.8;
     }
@@ -171,13 +173,31 @@ document.body.appendChild(mydiv);
     let CORRECT = false;
 
 function runner(event){
-    if(event.key === 'Enter'){
+    console.log(event.key)
+    switch(event.key){
+
+    case "Enter":
         console.log('enter press here! ')
         Score();
         rollIt();
+        break;
+    case "Escape":
+        console.log('enter alert here! ')
+        switch(toggleStyle){
+        case false:
+            setStyle({fontFamily:"monospace",fontSize:"20px",
+            zIndex:"2", display:"inline-block",position:"absolute", backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
+            settoggleStyle(true);
+            break;
+         case true:
+            setStyle({display:"none"});
+            settoggleStyle(false);
+            break;
+        default:
+            break;
     }
-    else{}
-}
+
+}}
     function Score() {
         console.log("score was running")
         let CORRECT = false;
@@ -240,7 +260,7 @@ function runner(event){
     }
     function useInput({ type /*...*/ }) {
 
-        const input = <input id="inputBox"value={value} placeholder='...' onKeyPress={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
+        const input = <input id="inputBox"value={value} placeholder='...' onKeyDown={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
         return [value, input];
     }
   
@@ -271,8 +291,7 @@ function runner(event){
 
         </select>        
         <div className="MainItems">
-
-      
+       
         <i id="infoTab"  onMouseEnter={e => {
                      setStyle({    fontFamily:"monospace",fontSize:"20px",
                      zIndex:"2", display:"inline-block",position:"absolute", backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
