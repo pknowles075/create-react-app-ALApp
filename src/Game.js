@@ -248,7 +248,7 @@ function runner(event){
             
         <div id="correct">Correct</div><br></br>
         <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
-        <option value="" >Gamemode</option>
+        <option value=""disabled >Gamemode</option>
 
             <option value="word">Word</option>
             <option value="quote">Quote</option>
