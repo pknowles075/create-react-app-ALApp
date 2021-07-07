@@ -10,7 +10,6 @@ var CorrectCOUNTER=0;
 var WrongCOUNTER=0;
 
 
-const English_Words=[];
 
     
 const Eng_Text =eng;
@@ -76,8 +75,11 @@ const Game = () => {
     }
     var [currentXP, setXP] = useState(localStorage.getItem('XP'))
     
-    var [currentMode, setMode] = useState("quote")
-
+    var [currentMode, setMode] = useState(localStorage.getItem('currentMode'))
+    if(localStorage.getItem('currentMode')===null){
+        localStorage.setItem('currentMode', "quote");
+        
+        }
     if(localStorage.getItem('currentLang')===null){
         localStorage.setItem('currentLang', currentLang);
         
@@ -150,18 +152,20 @@ mydiv.setAttribute("id","correctId");
 document.body.appendChild(mydiv);
 }
     var CHOOSEN_TEXT_Eng;
-        
-    var CHOOSEN_TEXT = currentQuote;
-    try{if(currentMode==="quote"){ CHOOSEN_TEXT_Eng = Eng_Text[selected].toLowerCase();
+        var CHOOSEN_TEXT="";
+    if(currentMode==="word"){
+         CHOOSEN_TEXT = "";
+        console.log("word")
+        localStorage.setItem('currentMode', "word");
     }
-    else{ CHOOSEN_TEXT_Eng = English_Words[selected].toLowerCase();
-    }
-}
-catch(e){
-    console.log('Error has happened');
-    window.location.reload();
-}
+    if(currentMode==="quote"){
+         CHOOSEN_TEXT = currentQuote;
+        console.log("quote")
+        localStorage.setItem('currentMode', "quote");
 
+    }   
+
+   
 
     const [value, setValue] = useState("");
     let CORRECT = false;
@@ -228,13 +232,9 @@ function runner(event){
         
     }
     function ChangeModeDiff(sel){
-        if(sel==="Gamemode"){
-            
-        }
-        else{
-            rollIt();
+        currentMode=sel;
         return setMode(sel);
-        }
+        
 
 
     }
