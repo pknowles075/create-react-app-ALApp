@@ -8,6 +8,18 @@ body{
     background-color: #111927;
   
 }
+.WordChoiceBox{
+    flex-wrap: wrap;
+    margin: auto;
+    width: 500px;
+}
+.WordChoiceBox #item{
+    outline:1px solid white;
+    width:200px;
+    height:100px;
+    float: left;
+    margin:10px 10px 10px 10px;
+}
 .MainItems{
     flex-wrap: wrap;
 }

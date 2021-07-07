@@ -84,7 +84,8 @@ const Game = () => {
     
     var [currentMode, setMode] = useState(localStorage.getItem('currentMode'))
     
-  
+    var [currentRan, setRan] = useState(Math.floor(Math.random()*6)-1);
+
     if(localStorage.getItem('currentLang')===null){
         localStorage.setItem('currentLang', "german");
         
@@ -112,16 +113,37 @@ const Game = () => {
     var CurrentAnswer = y[selected]["answer"];
 
     var CurrentWordnotDiv=y[selected]["word"]
+
     var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
 
+    var list=["der","fran","er","jonf","dream","der","der"];
+    var OneValue=list[currentRan];
+    var TwoValue=list[currentRan-2];
+    var ThreeValue=list[currentRan+2];
+    var FourValue=list[currentRan];
 
-
-
-
+        switch(currentRan){
+            case 1:
+                 OneValue=CurrentWord;
+                break;
+            case 2:
+                TwoValue=CurrentWord;
+                break;
+            case 3:
+                ThreeValue=CurrentWord;
+                break;
+            case 4:
+                FourValue=CurrentWord;
+                break;
+            default:
+                break
+            
+        }
     function rollIt() {
 
         const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         setSelected(Random_Quote_Num);
+        setRan(Math.floor(Math.random()*5));
 
         
     }
@@ -149,7 +171,7 @@ if(localStorage.getItem('currentMode')===null){
     }
 function ShowCorrect(){
     CorrectCOUNTER++;
-
+    
     var  myTxt = document.createElement("DIV");
     myTxt.innerText=CHOOSEN_TEXT;
     myTxt.setAttribute("id","learnWordsmyTxt");
@@ -162,6 +184,8 @@ document.body.appendChild(mydiv);
 }
     var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT="";
+
+        
     if(currentMode==="word"){
          CHOOSEN_TEXT = "";
         console.log("word")
@@ -216,7 +240,14 @@ function runner(event){
     
 
 }
-    function Score() {
+    function Score(g) {
+        var OfficalUsername=username;
+
+        if((g!==  undefined)){
+            OfficalUsername=g;
+            
+        }
+        
         console.log("score was running")
         let CORRECT = false;
         setValue('');
@@ -234,8 +265,9 @@ function runner(event){
 
 
 
-
-        if (CurrentAnswer === username) {
+            OfficalUsername=OfficalUsername.toLowerCase();
+            
+        if (CurrentAnswer === OfficalUsername) {
             currentScore =currentScore+ 100;
             CORRECT = true;
             setScore(currentScore);
@@ -350,6 +382,15 @@ function runner(event){
             <p id="username">{username}</p><br></br></div>
             <br></br>
       <br></br>
+      <div className="WordChoiceBox">
+          <div id="item" onClick={()=>{Score(OneValue); rollIt();}}>{OneValue}</div>
+          <div id="item" onClick={()=>{Score(TwoValue);rollIt();}}>{TwoValue}</div>
+          <div id="item" onClick={()=>{Score(ThreeValue);rollIt();}}>{ThreeValue}</div>
+          <div id="item" onClick={()=>{Score(FourValue);rollIt();}}>{FourValue}</div>
+
+
+      </div>
+
     
 <div id="learnWords">
     <p id="CorrectSave" >Quote list
