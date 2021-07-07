@@ -84,7 +84,7 @@ const Game = () => {
     
     var [currentMode, setMode] = useState(localStorage.getItem('currentMode'))
     
-    var [currentRan, setRan] = useState(Math.floor(Math.random()*6)-1);
+    var [currentRan, setRan] = useState(Math.floor(Math.random()*4));
 
     if(localStorage.getItem('currentLang')===null){
         localStorage.setItem('currentLang', "german");
@@ -100,10 +100,10 @@ const Game = () => {
 
 
     
-    const OFFICAL_NUM = 5;
+    const OFFICAL_NUM = 4;
    
 
-    var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
+    var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM)+1;
     
             
     const [selected, setSelected] = useState(Random_Quote_Num)
@@ -116,26 +116,27 @@ const Game = () => {
 
     var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
 
-    var list=["der","fran","er","jonf","dream","der","der"];
     var OneValue="none";
     var TwoValue="none";
     var ThreeValue="none";
     var FourValue="none";
-
-        switch(currentRan){
+        switch(selected){
+          
             case 1:
-                 OneValue=CurrentWord;
+                 OneValue=CurrentAnswer;
                 break;
             case 2:
-                TwoValue=CurrentWord;
+                TwoValue=CurrentAnswer;
                 break;
             case 3:
-                ThreeValue=CurrentWord;
+                ThreeValue=CurrentAnswer;
                 break;
             case 4:
-                FourValue=CurrentWord;
+                FourValue=CurrentAnswer;
                 break;
+           
             default:
+                alert(selected)
                 break
             
         }
@@ -244,7 +245,8 @@ function runner(event){
         var OfficalUsername=username;
 
         if((g!==  undefined)){
-            OfficalUsername=g;
+            
+            OfficalUsername=g.toLowerCase();
             
         }
         
@@ -265,8 +267,13 @@ function runner(event){
 
 
 
-            OfficalUsername=OfficalUsername.toLowerCase();
-            
+            try{
+
+            OfficalUsername=OfficalUsername.toLowerCase();}
+            catch(e){
+
+            }
+            alert(CurrentAnswer+OfficalUsername)
         if (CurrentAnswer === OfficalUsername) {
             currentScore =currentScore+ 100;
             CORRECT = true;
