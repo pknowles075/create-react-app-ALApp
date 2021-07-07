@@ -32,7 +32,7 @@ const Game = () => {
                 document.getElementById("titleDiv").style.outline="1px solid white";
                 break;
             default:
-                document.body.style.backgroundColor="white";
+                document.body.style.backgroundColor="#111927";
                 break;
             }
         };
