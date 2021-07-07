@@ -27,10 +27,12 @@ const Game = () => {
         document.body.style.opacity=1;
 
     }
-    if(localStorage.getItem('currentLang')===null){
-    }
+
     var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
-   
+    if(localStorage.getItem('currentLang')===null){
+
+        currentLang="german";
+    }
     var [currentTheme, setTheme] = useState(true)
     const toggleTrueFalse = () => {
         setTheme(!currentTheme) 
@@ -64,6 +66,8 @@ const Game = () => {
             currentLang=portugese;
             break;
         default:
+            currentLang=german;
+            console.log("default lang first load or error")
             break;
             
     }
@@ -78,12 +82,10 @@ const Game = () => {
     var [currentXP, setXP] = useState(localStorage.getItem('XP'))
     
     var [currentMode, setMode] = useState(localStorage.getItem('currentMode'))
-    if(localStorage.getItem('currentMode')===null){
-        localStorage.setItem('currentMode', "quote");
-        
-        }
+    
+  
     if(localStorage.getItem('currentLang')===null){
-        localStorage.setItem('currentLang', currentLang);
+        localStorage.setItem('currentLang', "german");
         
         }
        
@@ -139,7 +141,11 @@ function RemoveWrong(){
     document.body.removeChild(mydiv);
 
 }
+if(localStorage.getItem('currentMode')===null){
 
+    localStorage.setItem('currentMode', "quote");
+    
+    }
 function ShowCorrect(){
     CorrectCOUNTER++;
 
@@ -160,13 +166,19 @@ document.body.appendChild(mydiv);
         console.log("word")
         localStorage.setItem('currentMode', "word");
     }
+    else{
+        CHOOSEN_TEXT = currentQuote;
+        console.log("quote")
+        localStorage.setItem('currentMode', "quote");
+    }   
     if(currentMode==="quote"){
-         CHOOSEN_TEXT = currentQuote;
+        CHOOSEN_TEXT = currentQuote;
         console.log("quote")
         localStorage.setItem('currentMode', "quote");
 
-    }   
-
+    }
+ 
+   
    
 
     const [value, setValue] = useState("");
@@ -195,9 +207,14 @@ function runner(event){
             break;
         default:
             break;
+        }
+        break;
+    default:
+         break;
     }
+    
 
-}}
+}
     function Score() {
         console.log("score was running")
         let CORRECT = false;
@@ -322,7 +339,7 @@ function runner(event){
 </div>
 </div> 
 
-        <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
+        <div id="showQuoteBox"><ul>Random<p id="currentLang">{localStorage.getItem("currentMode")}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
         <div id="arabicText" style={{color:"red"}}><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
 </div>
         
