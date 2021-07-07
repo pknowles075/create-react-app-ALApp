@@ -17,7 +17,15 @@ const Eng_Text =eng;
 
         
 const Game = () => {
+    const [style, setStyle] = useState({display: 'none'});
 
+    if(style.display==="in-block"){
+        document.body.style.opacity=.5;
+    }
+    else{
+        document.body.style.opacity=1;
+
+    }
     if(localStorage.getItem('currentLang')===null){
     }
     var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
@@ -261,10 +269,27 @@ function runner(event){
             <option value="portugese">Portugese</option>
             <option value="german">German</option>
 
-        </select>
-        </div>
-        <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
+        </select>        
+        <div className="MainItems">
 
+      
+        <i id="infoTab"  onMouseEnter={e => {
+                     setStyle({    fontFamily:"monospace",fontSize:"20px",
+                     zIndex:"2", display:"inline-block",position:"absolute",backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
+                 }}
+                 onMouseLeave={e => {
+                     setStyle({display: 'none'})
+                 }}
+            >i</i>
+
+        <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
+        <div id="ShowInfo"style={style}>
+            <bold style={{float:"left" ,fontSize:"30px",color:"black",marginLeft:"10px"}}>About</bold><br></br><p>Lang Cloud is a free website to practice Language Vocab! You can choose from many Langauges German 
+            Spanish French etc. You get a random Quote and from there you are given a random word from the Quote. And if you translate the choosen 
+            word you get it right! :) Have fun</p></div>
+
+        </div>
+        </div>
         <div id="titleDiv">
 
             <div id="mainBoxArea">
@@ -273,10 +298,11 @@ function runner(event){
             <p id="textP">Correct</p>
             <div id="counterC">{CorrectCOUNTER}</div>
 
-            </div> 
          
 
 </div>
+</div> 
+
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{currentMode}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
         <div id="arabicText" style={{color:"red"}}><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
 </div>

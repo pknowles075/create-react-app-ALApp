@@ -8,7 +8,36 @@ body{
     background-color: #111927;
   
 }
-
+.MainItems{
+    flex-wrap: wrap;
+}
+#infoTab{
+display: inline-block;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width:32px;
+    height:32px;
+    border-radius: 60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+#infoTab:hover{
+    background-color: #111927;
+    
+}
+#ShowInfo{
+    position: absolute;
+    background-color: #111927;
+    margin: auto;
+    width:90%;
+    height: 90%;
+}
 #correct{
     color:white;
     font-size: 50px;
@@ -164,11 +193,20 @@ button:hover{
 }
 
 #toggler{
+    display: inline-block;
     background-color: black;
-    outline: none;
     color: white;
-    border: none;
-    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    margin-left:10px;
+    border:none;
+    display: none;
+
 }
 #mySelected{
     margin: auto;
