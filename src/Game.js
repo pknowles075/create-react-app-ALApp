@@ -118,7 +118,7 @@ mydiv.setAttribute("id","wrongId");
 
 function ShowWrong(){
     WrongCOUNTER++;
-    mydiv.innerHTML = "Wrong the correct Quote was ["+CurrentAnswer.toUpperCase()+"]";                   
+    mydiv.innerHTML = "Wrong the correct Quote was "+CurrentAnswer.toUpperCase();                   
     document.body.appendChild(mydiv);
 }
 

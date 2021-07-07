@@ -88,10 +88,12 @@ button:hover{
     text-align: center;
     font-size: 20px;
     top:100px;
-    margin: auto;
-    margin-top: 60px;
-    width: 95%;
+    display: inline-block;
+    max-height: 100px;
+    width: 90%;
     border-radius: 10px;
+    margin-left: 5%;
+    
 }
 #correctId{
     background-color: rgb(30, 241, 30);
