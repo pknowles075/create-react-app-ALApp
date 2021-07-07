@@ -16,6 +16,7 @@ const Eng_Text =eng;
 
         
 const Game = () => {
+    
     const [style, setStyle] = useState({display: 'none'});
 
     const [toggleStyle, settoggleStyle] = useState(false);
@@ -132,7 +133,7 @@ mydiv.setAttribute("id","wrongId");
 
 function ShowWrong(){
     WrongCOUNTER++;
-    mydiv.innerHTML = "Wrong the correct Quote was "+CurrentAnswer.toUpperCase();                   
+    mydiv.innerHTML = "Wrong the correct Word was "+CurrentAnswer.toUpperCase();                   
     document.body.appendChild(mydiv);
 }
 
