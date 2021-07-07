@@ -19,8 +19,8 @@ const Eng_Text =eng;
 const Game = () => {
     const [style, setStyle] = useState({display: 'none'});
 
-    if(style.display==="in-block"){
-        document.body.style.opacity=.5;
+    if(style.display==="inline-block"){
+        document.body.style.opacity=.8;
     }
     else{
         document.body.style.opacity=1;
@@ -275,7 +275,7 @@ function runner(event){
       
         <i id="infoTab"  onMouseEnter={e => {
                      setStyle({    fontFamily:"monospace",fontSize:"20px",
-                     zIndex:"2", display:"inline-block",position:"absolute",backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
+                     zIndex:"2", display:"inline-block",position:"absolute", backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
                  }}
                  onMouseLeave={e => {
                      setStyle({display: 'none'})
