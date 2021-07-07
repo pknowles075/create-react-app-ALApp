@@ -117,10 +117,10 @@ const Game = () => {
     var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
 
     var list=["der","fran","er","jonf","dream","der","der"];
-    var OneValue=list[currentRan];
-    var TwoValue=list[currentRan-2];
-    var ThreeValue=list[currentRan+2];
-    var FourValue=list[currentRan];
+    var OneValue="none";
+    var TwoValue="none";
+    var ThreeValue="none";
+    var FourValue="none";
 
         switch(currentRan){
             case 1:
