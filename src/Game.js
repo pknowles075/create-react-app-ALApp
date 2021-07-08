@@ -113,7 +113,7 @@ const Game = () => {
 
     var CurrentWordnotDiv=y[selected]["word"]
 
-    var CurrentWord = <div style={{fontFamily:"cursive",color:"lime",fontWeight:"light",fontSize:"30px",display:"inline-block",textDecoration:"underline"}}>{CurrentWordnotDiv}</div>;
+    var CurrentWord = <div style={{fontFamily:"monospace",color:"lime",fontWeight:"light",fontSize:"30px",display:"inline-block",textDecoration:"underline"}}>{CurrentWordnotDiv}</div>;
 
     var list=["door","soda","drink","beer","salad","football","computer"];
     //list = list.filter(list => list.includes(!CurrentAnswer));
