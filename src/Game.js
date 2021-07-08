@@ -84,7 +84,6 @@ const Game = () => {
     
     var [currentMode, setMode] = useState(localStorage.getItem('currentMode'))
     
-    var [currentRan, setRan] = useState(Math.floor(Math.random()*4));
 
     if(localStorage.getItem('currentLang')===null){
         localStorage.setItem('currentLang', "german");
@@ -116,14 +115,20 @@ const Game = () => {
 
     var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
 
-    var OneValue="none";
-    var TwoValue="none";
-    var ThreeValue="none";
-    var FourValue="none";
+    var list=["door","dream","drink","beer"];
+    list = list.sort(() => selected);
+
+    var OneValue=list[0];
+    var TwoValue=list[1];
+    var ThreeValue=list[2];
+    var FourValue=list[3];
+    
         switch(selected){
-          
+            case 0:
+                OneValue=CurrentAnswer;
+                break;
             case 1:
-                 OneValue=CurrentAnswer;
+                OneValue=CurrentAnswer;
                 break;
             case 2:
                 TwoValue=CurrentAnswer;
@@ -144,7 +149,6 @@ const Game = () => {
 
         const Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
         setSelected(Random_Quote_Num);
-        setRan(Math.floor(Math.random()*5));
 
         
     }
@@ -273,7 +277,6 @@ function runner(event){
             catch(e){
 
             }
-            alert(CurrentAnswer+OfficalUsername)
         if (CurrentAnswer === OfficalUsername) {
             currentScore =currentScore+ 100;
             CORRECT = true;
@@ -390,10 +393,10 @@ function runner(event){
             <br></br>
       <br></br>
       <div className="WordChoiceBox">
-          <div id="item" onClick={()=>{Score(OneValue); rollIt();}}>{OneValue}</div>
-          <div id="item" onClick={()=>{Score(TwoValue);rollIt();}}>{TwoValue}</div>
-          <div id="item" onClick={()=>{Score(ThreeValue);rollIt();}}>{ThreeValue}</div>
-          <div id="item" onClick={()=>{Score(FourValue);rollIt();}}>{FourValue}</div>
+          <div id="item" onClick={()=>{Score(OneValue); rollIt();}}><p>{OneValue}</p></div>
+          <div id="item" onClick={()=>{Score(TwoValue);rollIt();}}><p>{TwoValue}</p></div>
+          <div id="item" onClick={()=>{Score(ThreeValue);rollIt();}}><p>{ThreeValue}</p></div>
+          <div id="item" onClick={()=>{Score(FourValue);rollIt();}}><p>{FourValue}</p></div>
 
 
       </div>

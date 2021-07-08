@@ -10,15 +10,21 @@ body{
 }
 .WordChoiceBox{
     flex-wrap: wrap;
-    margin: auto;
+    margin-left:34%;
     width: 500px;
+    
 }
 .WordChoiceBox #item{
-    outline:1px solid white;
-    width:200px;
+   width:200px;
     height:100px;
     float: left;
     margin:10px 10px 10px 10px;
+    background-color: forestgreen;
+    border-radius: 20px;
+}
+.WordChoiceBox #item p{
+    font-size: 20px;
+    text-align: center;
 }
 .MainItems{
     flex-wrap: wrap;
@@ -131,7 +137,7 @@ button:hover{
     max-height: 100px;
     width: 100%;
     position: absolute;
-    top:90%;
+    top:80%;
 
     
 }
@@ -142,7 +148,7 @@ button:hover{
     max-height: 100px;
     width: 100%;
     position: absolute;
-    top:90%;
+    top:80%;
     
 }
 #thisButton:hover{
