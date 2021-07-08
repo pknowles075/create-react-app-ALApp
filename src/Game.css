@@ -1,11 +1,11 @@
 :root{
     --y:(#e2b714);
-    --FGd:rgb(46,125,50);;
+    --FG:none;
 
 }
 body{
 
-    background-color: #111927;
+    background-color: #000000;
   
 }
 .WordChoiceBox{
@@ -18,7 +18,7 @@ body{
    width:200px;
     height:100px;
     float: left;
-    margin:10px 10px 10px 10px;
+    margin: 10px 10px;
     background-color: forestgreen;
     border-radius: 20px;
 }
@@ -109,7 +109,7 @@ display: inline-block;
     color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:10px 10px 10px 10px;
-
+    margin-left: 100px;
     
 
 }
@@ -163,19 +163,16 @@ button:hover{
     margin: auto;
     color: var(--FG);
     margin-top: 10px;
-    background-color: rgb(122, 119, 119,.5);
-
 }
 #showQuoteBox{
     background-color: var(--FG);;
-    height: 50px;
+    height: 20px;
     width: 500px;
     margin: auto;
     margin-bottom: 0px;
-    color: black;
+    color: white;
     font-size: 20px;
     text-align: left;
-    margin-bottom: .5px;
     outline:none;
     border:none;
 
@@ -192,7 +189,7 @@ button:hover{
 }
 
 #titleDiv p{
-    color: var(--FG);
+    
 
     font-size:20px;
     margin-bottom: 0px;
@@ -239,13 +236,14 @@ button:hover{
     margin-left: 10px;
     text-align: right;
     padding: 2px;
-    background-color: rgb(26, 172, 26);
+    background-color: #7289da;
+
     outline: none;
     border-radius: 10px;
 
 }
 #mySelected option{
-    color: black;
+    color: white;
     text-align: center;
 }
 h4{
@@ -277,10 +275,10 @@ h4{
 #titleDiv #textP{
     float: left;
     text-align: center;
-    color:black;
+    color:white;
+    font-weight: lighter;
     font-size: 30px;
     margin-left: 25%;
-    font-weight: 900;
     border:none;
     outline: none;
 
@@ -292,6 +290,8 @@ h4{
     margin-left: 10px;
     float: left;
     font-weight: 600;
+    text-decoration: underline;
+    
 }
 #titleDiv #counterC{
     color:lime;
@@ -299,6 +299,8 @@ h4{
     margin-left: 10px;
     float: left;
     font-weight: 600;
+    text-decoration: underline;
+
 }
 #xpShow{
 
@@ -361,6 +363,7 @@ h4{
     color: white;
 }
 #arabicText #currentWord{
-    color: red;
+    text-decoration: underline;
+font-family: fantasy;
     font-weight: bold;
 }

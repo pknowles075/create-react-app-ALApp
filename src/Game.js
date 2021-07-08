@@ -113,15 +113,17 @@ const Game = () => {
 
     var CurrentWordnotDiv=y[selected]["word"]
 
-    var CurrentWord = <div style={{color:"red",fontWeight:"bold",fontSize:"30px",display:"inline-block"}}>{CurrentWordnotDiv}</div>;
+    var CurrentWord = <div style={{fontFamily:"cursive",color:"lime",fontWeight:"light",fontSize:"30px",display:"inline-block",textDecoration:"underline"}}>{CurrentWordnotDiv}</div>;
 
-    var list=["door","dream","drink","beer"];
-    list = list.sort(() => selected);
+    var list=["door","soda","drink","beer","salad","football","computer"];
+    //list = list.filter(list => list.includes(!CurrentAnswer));
 
+    list = list.sort(() => 0.5 - selected);
+    console.log(list)
     var OneValue=list[0];
     var TwoValue=list[1];
     var ThreeValue=list[2];
-    var FourValue=list[3];
+    var FourValue=list[list.length-1];
     
         switch(selected){
             case 0:
@@ -177,12 +179,7 @@ if(localStorage.getItem('currentMode')===null){
 function ShowCorrect(){
     CorrectCOUNTER++;
     
-    var  myTxt = document.createElement("DIV");
-    myTxt.innerText=CHOOSEN_TEXT;
-    myTxt.setAttribute("id","learnWordsmyTxt");
-
-    document.getElementById("CorrectSave").appendChild(myTxt);
-
+  
 mydiv.innerHTML = "Correct";  
 mydiv.setAttribute("id","correctId");
 document.body.appendChild(mydiv);
@@ -383,7 +380,7 @@ function runner(event){
 </div> 
 
         <div id="showQuoteBox"><ul>Random<p id="currentLang">{localStorage.getItem("currentMode")}</p>in<p id="currentLang">{localStorage.getItem('currentLang')}</p></ul> </div>
-        <div id="arabicText" style={{color:"red"}}><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
+        <div id="arabicText" ><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
 </div>
         
         <div className="mainBox"> {userInput}
@@ -401,11 +398,7 @@ function runner(event){
 
       </div>
 
-    
-<div id="learnWords">
-    <p id="CorrectSave" >Quote list
-    </p>
-</div>
+
 <div id="AllQuotes">
     <p id="quotesP" >{Eng_Text}
     </p>
