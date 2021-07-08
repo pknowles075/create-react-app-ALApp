@@ -24,7 +24,6 @@ const Game = () => {
         setStyleBar({width:"0%"});
     }
     else{
-        alert(styleBar.width)
 
     }
     const [toggleStyle, settoggleStyle] = useState(false);
