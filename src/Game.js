@@ -16,16 +16,16 @@ const Eng_Text =eng;
 
         
 const Game = () => {
-    
+    if(localStorage.getItem('currentLevel')===null){
+        localStorage.setItem('currentLevel', 0);
+        
+        }
     const [style, setStyle] = useState({display: 'none'});
     const [styleBar, setStyleBar] = useState({width:"1%"});
     var [cLevel, setLevel] = useState(localStorage.getItem('currentLevel'));
    
     
-    if(localStorage.getItem('currentLevel')===null){
-        localStorage.setItem('currentLevel', 0);
-        
-        }
+  
        
     if(styleBar.width==="100%"){
         alert("You just did 10 cards right!:) level up!")
