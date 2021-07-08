@@ -8,7 +8,7 @@ import portugese from "./portuguese.json"
 import french from "./french.json"
 var CorrectCOUNTER=0;
 var WrongCOUNTER=0;
-
+var counter=0;
 
 
     
@@ -18,9 +18,17 @@ const Eng_Text =eng;
 const Game = () => {
     
     const [style, setStyle] = useState({display: 'none'});
+    const [styleBar, setStyleBar] = useState({width:"1%"});
+    if(styleBar.width==="100%"){
+        alert("Level up!")
+        setStyleBar({width:"0%"});
+    }
+    else{
+        alert(styleBar.width)
 
+    }
     const [toggleStyle, settoggleStyle] = useState(false);
-
+    
     if(style.display==="inline-block"){
         document.body.style.opacity=.8;
     }
@@ -178,6 +186,9 @@ if(localStorage.getItem('currentMode')===null){
     }
 function ShowCorrect(){
     CorrectCOUNTER++;
+    counter=counter+10;
+    setStyleBar({width:+counter+"%"});
+ 
     
   
 mydiv.innerHTML = "Correct";  
@@ -330,7 +341,9 @@ function runner(event){
     return (
         <>
         <div id="links">
-            
+       
+
+        
         <div id="correct">Correct</div><br></br>
         <select id="mySelected" placeholder="Lang" onChange={(val) => ChangeModeDiff(val.target.value)}>
         <option value=""disabled >Gamemode</option>
@@ -366,6 +379,9 @@ function runner(event){
 
         </div>
         </div>
+        <div id="myProgress"></div>
+        <div id="myBar" style={styleBar}></div>
+        
         <div id="titleDiv">
 
             <div id="mainBoxArea">

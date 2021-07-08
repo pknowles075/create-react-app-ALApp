@@ -8,6 +8,15 @@ body{
     background-color: #000000;
   
 }
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  #myBar {
+    height: 30px;
+    background-color: #04AA6D;
+  }
 .WordChoiceBox{
     flex-wrap: wrap;
     margin:auto;
