@@ -19,9 +19,21 @@ const Game = () => {
     
     const [style, setStyle] = useState({display: 'none'});
     const [styleBar, setStyleBar] = useState({width:"1%"});
+    var [cLevel, setLevel] = useState(localStorage.getItem('currentLevel'));
+   
+    
+    if(localStorage.getItem('currentLevel')===null){
+        localStorage.setItem('currentLevel', 0);
+        
+        }
+       
     if(styleBar.width==="100%"){
-        alert("Level up!")
+        alert("You just did 10 cards right!:) level up!")
         setStyleBar({width:"0%"});
+        cLevel++;
+        setLevel(cLevel);
+        localStorage.setItem('currentLevel', cLevel);
+
     }
     else{
 
@@ -340,6 +352,7 @@ function runner(event){
     return (
         <>
         <div id="links">
+            
        
 
         
@@ -380,7 +393,7 @@ function runner(event){
         </div>
         <div id="myProgress"></div>
         <div id="myBar" style={styleBar}></div>
-        
+        <div style={{fontSize:"30px", fontWeight:"900"}}>Level {cLevel}</div>
         <div id="titleDiv">
 
             <div id="mainBoxArea">
