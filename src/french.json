@@ -1,8 +1,7 @@
 [
-    {"quote":"french1","answer":"eng1"},
-    {"quote":"french2","answer":"eng2"},
-    {"quote":"french3","answer":"eng3"},
-    {"quote":"french4","answer":"eng4"},
-    {"quote":"french5","answer":"eng5"}
-
+    {"quote":"L'amour est dans l'air","answer":"air","word":"air"},
+    {"quote":"Soistoimême; tout le monde est déjà pris","answer":"taken","word":"pris"},
+    {"quote":"Deux choses sont infinies : l'univers et la bêtise humaine ; et je ne suis pas sûr de l'univers.","answer":"universe","word":"univers"},
+    {"quote":"So many books, so little time","answer":"time","word":"temps"},
+    {"quote":"A room without books is like a body without a soul","answer":"soul","word":"âme"}
 ]
