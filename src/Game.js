@@ -6,6 +6,8 @@ import german from "./german.json"
 import spanish from "./Spanish.json"
 import portugese from "./portuguese.json"
 import french from "./french.json"
+import ReactGA from 'react-ga';
+
 var CorrectCOUNTER=0;
 var WrongCOUNTER=0;
 var counter=0;
@@ -16,6 +18,8 @@ const Eng_Text =eng;
 
         
 const Game = () => {
+    ReactGA.initialize('G-NBQ2D3WLWX');
+ReactGA.pageview(window.location.pathname + window.location.search);
     if(localStorage.getItem('currentLevel')===null){
         localStorage.setItem('currentLevel', 0);
         
