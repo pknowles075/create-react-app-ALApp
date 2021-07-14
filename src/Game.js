@@ -51,7 +51,7 @@ const Game = () => {
     var [currentLang, setLang] = useState(localStorage.getItem('currentLang'))
     if(localStorage.getItem('currentLang')===null){
 
-        currentLang="german";
+        currentLang="spanish";
     }
     var [currentTheme, setTheme] = useState(true)
     const toggleTrueFalse = () => {
