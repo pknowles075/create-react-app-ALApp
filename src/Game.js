@@ -372,14 +372,7 @@ function runner(event){
         </select>        
         <div className="MainItems">
        
-        <i id="infoTab"  onMouseEnter={e => {
-                     setStyle({    fontFamily:"monospace",fontSize:"20px",
-                     zIndex:"2", display:"inline-block",position:"absolute", backgroundColor: "gray",width:"50%",height:"70%",left:"25%" ,top:"20%"});
-                 }}
-                 onMouseLeave={e => {
-                     setStyle({display: 'none'})
-                 }}
-            >i</i>
+  
 
         <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
         <div id="ShowInfo"style={style}>
