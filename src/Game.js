@@ -118,7 +118,7 @@ const Game = () => {
 
 
     
-    const OFFICAL_NUM = 4;
+    const OFFICAL_NUM = y["length"];
    
 
     var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM)+1;
@@ -127,7 +127,6 @@ const Game = () => {
     const [selected, setSelected] = useState(Random_Quote_Num)
     var currentQuote = y[selected]["quote"];
 
-    
     var CurrentAnswer = y[selected]["answer"];
 
     var CurrentWordnotDiv=y[selected]["word"]
@@ -143,7 +142,7 @@ const Game = () => {
     var TwoValue=list[1];
     var ThreeValue=list[2];
     var FourValue=list[list.length-1];
-    
+   
         switch(selected){
             case 0:
                 OneValue=CurrentAnswer;
@@ -160,10 +159,9 @@ const Game = () => {
             case 4:
                 FourValue=CurrentAnswer;
                 break;
-           
             default:
-                alert(selected)
-                break
+                FourValue=CurrentAnswer;
+                break;
             
         }
     function rollIt() {
