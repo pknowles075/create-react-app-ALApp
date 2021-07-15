@@ -1,4 +1,4 @@
-import React, { Component,useEffect} from "react"
+import React, { Component} from "react"
 import "./App.css"
 import Header from "./Header.js"
 import ReactGA from 'react-ga';
@@ -6,14 +6,9 @@ import ReactGA from 'react-ga';
 class App extends Component {
  
   render() {
-    useEffect(()=>{
       ReactGA.initialize('G-NBQ2D3WLWX');
-
-    
-
-    
-    ReactGA.pageview(window.location.pathname + window.location.search)
-    })
+      ReactGA.pageview(window.location.pathname + window.location.search)
+  
     return (
       <>
      
