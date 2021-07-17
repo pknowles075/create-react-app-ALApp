@@ -174,12 +174,15 @@ const Game = () => {
 
 
 const  mydiv = document.createElement("DIV");
+const myp = document.createElement("p");
 mydiv.setAttribute("id","wrongId");
+myp.setAttribute("id","wrongIdp");
 
 
 function ShowWrong(){
     WrongCOUNTER++;
-    mydiv.innerHTML = "Wrong the correct Word was "+CurrentAnswer.toUpperCase();                   
+    myp.innerText = "Wrong the correct Word was "+CurrentAnswer.toUpperCase();      
+    mydiv.appendChild(myp);             
     document.body.appendChild(mydiv);
 }
 
@@ -194,15 +197,18 @@ if(localStorage.getItem('currentMode')===null){
     
     }
 function ShowCorrect(){
+
     CorrectCOUNTER++;
     counter=counter+10;
     setStyleBar({width:+counter+"%"});
  
-    
+    mydiv.setAttribute("id","correctId");
+
   
-mydiv.innerHTML = "Correct";  
-mydiv.setAttribute("id","correctId");
-document.body.appendChild(mydiv);
+    CorrectCOUNTER++;
+    myp.innerText = "Correct!";      
+    mydiv.appendChild(myp);             
+    document.body.appendChild(mydiv);
 }
     var CHOOSEN_TEXT_Eng;
         var CHOOSEN_TEXT="";
