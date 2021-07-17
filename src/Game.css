@@ -47,7 +47,7 @@ body{
     height:100px;
     float: left;
     margin: 20px 20px;
-    background-color: #7289da;
+    background-color: #04AA6D;;
     border:1px solid var(--color4);
     border-radius: 16px;
 }
