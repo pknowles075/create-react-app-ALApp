@@ -119,11 +119,12 @@ const Game = () => {
     const OFFICAL_NUM = y["length"];
    
 
-    var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM)+1;
+    var Random_Quote_Num = Math.floor(Math.random() * OFFICAL_NUM);
     
             
     const [selected, setSelected] = useState(Random_Quote_Num)
-        console.log(y[selected]["quote"])
+    console.log(selected)
+
     var currentQuote = y[selected]["quote"];
 
     var CurrentAnswer = y[selected]["answer"];
@@ -376,7 +377,7 @@ function runner(event){
 
         <button id="toggler" onClick={toggleTrueFalse}>Theme</button>
         <div id="ShowInfo"style={style}>
-            <bold style={{float:"left" ,fontSize:"30px",color:"black",marginLeft:"10px"}}>About</bold><br></br><p>Lang Cloud is a free website to practice Language Vocab! You can choose from many Langauges German 
+            <p style={{float:"left" ,fontSize:"30px",color:"black",marginLeft:"10px"}}>About</p><br></br><p>Lang Cloud is a free website to practice Language Vocab! You can choose from many Langauges German 
             Spanish French etc. You get a random Quote and from there you are given a random word from the Quote. And if you translate the choosen 
             word you get it right! :) Have fun</p></div>
 
