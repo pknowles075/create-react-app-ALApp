@@ -406,7 +406,7 @@ function runner(event){
         
         <div id="mainBox"> {userInput}
 
-            <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
+            <button  onClick={() => {Score(); rollIt();}}  id="thisButton"></button><br></br>
             <p id="username">{username}</p><br></br></div>
       <div id="WordChoiceBox">
           <div id="item" onClick={()=>{Score(OneValue); rollIt();}}><p>{OneValue}</p></div>
