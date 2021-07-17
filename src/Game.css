@@ -1,6 +1,7 @@
 :root{
     --y:(#e2b714);
     --FG:none;
+    --bgholdergray--:rgba(26,26,27,0.8);
 
 }
 body{
@@ -8,40 +9,64 @@ body{
     background-color: #000000;
   
 }
+.UserArea{
+    cursor:default;
+    position: relative;
+
+    color: white;
+    width: 60%;
+    height:700px;
+    background-color: var(--bgholdergray--);
+    border:1px solid var(--color4);
+    border-radius: 4px;
+    margin: auto;
+}
 #myProgress {
     width: 100%;
     background-color: #ddd;
+    margin:10px 10px 10px 10px;
   }
   
   #myBar {
-      margin-top: 40px;
-    height: 30px;
+      margin-top: 50px;
+    height: 20px;
     background-color: #04AA6D;
+    margin-bottom: 10px;
+    
   }
-.WordChoiceBox{
+#WordChoiceBox{
     flex-wrap: wrap;
     margin:auto;
     
     width: 500px;
-    
+    background-color: white;
 }
-.WordChoiceBox #item{
+#WordChoiceBox #item{
+    opacity: 1;
    width:200px;
     height:100px;
     float: left;
     margin: 20px 20px;
-    background-color: forestgreen;
-    border-radius: 20px;
+    background-color: #7289da;
+    border:1px solid var(--color4);
+    border-radius: 16px;
 }
-.WordChoiceBox #item p{
-    font-size: 20px;
+#WordChoiceBox #item:hover{
+opacity: .7;
+cursor: pointer;
+}
+
+#WordChoiceBox #item p{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
     text-align: center;
 }
-.MainItems{
+#MainItems{
     flex-wrap: wrap;
 }
 #infoTab{
-display: inline-block;
+/*b*/
     background-color: black;
     color: white;
     font-size: 20px;
@@ -88,7 +113,7 @@ display: inline-block;
     
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background-color: rgba(28, 38, 56, 0.75);
+    background-color: #3d3d3d98;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 
@@ -148,7 +173,7 @@ button:hover{
     max-height: 100px;
     width: 100%;
     position: absolute;
-    top:95%;
+    top:90%;
 
     
 }
@@ -159,7 +184,7 @@ button:hover{
     max-height: 100px;
     width: 100%;
     position: absolute;
-    top:95%;
+    top:90%;
     
 }
 #thisButton:hover{
@@ -219,7 +244,7 @@ button:hover{
 }
 
 #toggler{
-    display: inline-block;
+    /*b*/
     background-color: black;
     color: white;
     font-size: 20px;
@@ -245,9 +270,9 @@ button:hover{
     width: 300px;
     height: auto;
     margin-left: 10px;
-    text-align: right;
+    text-align: center;
     padding: 2px;
-    background-color: rgba(28, 38, 56, 0.75);
+    background-color: #3d3d3d98;
 
 
     outline: none;
@@ -261,7 +286,7 @@ button:hover{
 h4{
     color: var(--FG);
 }
-.mainBox{
+#MainBox{
     border-radius: none;
     outline: none;
 

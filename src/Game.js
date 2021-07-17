@@ -6,7 +6,6 @@ import german from "./german.json"
 import spanish from "./Spanish.json"
 import portugese from "./portuguese.json"
 import french from "./french.json"
-import ReactGA from 'react-ga';
 
 var CorrectCOUNTER=0;
 var WrongCOUNTER=0;
@@ -18,12 +17,7 @@ const Eng_Text =eng;
 
         
 const Game = () => {
-    ReactGA.initialize('G-NBQ2D3WLWX');
-ReactGA.pageview(window.location.pathname + window.location.search);
-    if(localStorage.getItem('currentLevel')===null){
-        localStorage.setItem('currentLevel', 0);
-        
-        }
+ 
     const [style, setStyle] = useState({display: 'none'});
     const [styleBar, setStyleBar] = useState({width:"1%"});
     var [cLevel, setLevel] = useState(localStorage.getItem('currentLevel'));
@@ -129,6 +123,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
     
             
     const [selected, setSelected] = useState(Random_Quote_Num)
+        console.log(y[selected]["quote"])
     var currentQuote = y[selected]["quote"];
 
     var CurrentAnswer = y[selected]["answer"];
@@ -339,9 +334,10 @@ function runner(event){
 
 
     }
+    
     function useInput({ type /*...*/ }) {
 
-        const input = <input id="inputBox"value={value} placeholder='...' onKeyDown={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
+        const input = <input id="inputBox"value={value} placeholder='...' autoComplete="off" onKeyDown={runner} autoFocus="autoFocus" onChange={e => setValue(e.target.value)} type={type} />;
         return [value, input];
     }
   
@@ -352,7 +348,7 @@ function runner(event){
             Your Translate {username} Correct Translate {CHOOSEN_TEXT_Eng} 
             Your {CORRECT} Your score is: {currentScore}</p>
     return (
-        <>
+<>        
         <div id="links">
             
        
@@ -384,10 +380,12 @@ function runner(event){
             Spanish French etc. You get a random Quote and from there you are given a random word from the Quote. And if you translate the choosen 
             word you get it right! :) Have fun</p></div>
 
-        </div>
+       
         </div>
         <div id="myProgress"></div>
         <div id="myBar" style={styleBar}></div>
+        <div className="UserArea">
+
         <div style={{fontSize:"30px", fontWeight:"900"}}>Level {cLevel}</div>
         <div id="titleDiv">
 
@@ -406,13 +404,11 @@ function runner(event){
         <div id="arabicText" ><p id="currentChoice">{CHOOSEN_TEXT}<br></br>{CurrentWord}</p>
 </div>
         
-        <div className="mainBox"> {userInput}
+        <div id="mainBox"> {userInput}
 
             <button  onClick={() => {Score(); rollIt();}}  id="thisButton"><p>Reload</p></button><br></br>
             <p id="username">{username}</p><br></br></div>
-            <br></br>
-      <br></br>
-      <div className="WordChoiceBox">
+      <div id="WordChoiceBox">
           <div id="item" onClick={()=>{Score(OneValue); rollIt();}}><p>{OneValue}</p></div>
           <div id="item" onClick={()=>{Score(TwoValue);rollIt();}}><p>{TwoValue}</p></div>
           <div id="item" onClick={()=>{Score(ThreeValue);rollIt();}}><p>{ThreeValue}</p></div>
@@ -421,12 +417,13 @@ function runner(event){
 
       </div>
 
-
+      </div>
 <div id="AllQuotes">
     <p id="quotesP" >{Eng_Text}
     </p>
 </div>
             
+        </div>
         </>
     )
 }
